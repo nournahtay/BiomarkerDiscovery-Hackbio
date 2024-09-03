@@ -2,7 +2,7 @@
 
 Author: Nour Nahtay (@nournahtay)
 
-Transcriptomics is the comprehensive study of all RNA transcripts expressed throughout the organism. The field encompasses analyzing RNA types, their functions, and expression levels under varying conditions, all of which contribute to the uncovering of the molecular nature of disorders like cancer, thus enhancing diagnosis and paving the way for new therapeutic strategies. (Dong et. al. 2013)
+Transcriptomics is the comprehensive study of all RNA transcripts expressed throughout the organism. The field encompasses analyzing RNA types, their functions, and expression levels under varying conditions, all of which contribute to the uncovering of the molecular nature of disorders like cancer, thus enhancing diagnosis and paving the way for new therapeutic strategies. (Dong et. al. 2013) 
 
 
 ### **Transcripts and Cancer: An Overview on Etiology and a Case Study**
