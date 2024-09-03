@@ -39,8 +39,3 @@ In conclusion, transcriptomics is a revolutionary omics branch that has played m
 3. Supplitt, Stanislaw, Pawel Karpinski, Maria Sasiadek, and Izabela Laczmanska. 2021. "Current Achievements and Applications of Transcriptomics in Personalized Cancer Medicine" _International Journal of Molecular Sciences_ 22, no. 3: 1422. <https://doi.org/10.3390/ijms22031422>  
 
 4. Tian, Z., Liang, G., Cui, K., Liang, Y., Wang, Q., Lv, S., Cheng, X., & Zhang, L. (2021, February 3). Insight Into the Prospects for RNAi Therapy of Cancer. Frontiers. <https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2021.644718/full> , resulting in four unique haploid cells.
-
-
-### Conclusion<a id="conclusion"></a>
-
-Cell division, whether through mitosis or meiosis, is essential for life. Mitosis allows for growth, repair, and maintenance of tissues, while meiosis introduces genetic variation, which is crucial for evolution and the survival of species. Without cell division, life as we know it would not exist.
