@@ -1,22 +1,44 @@
-### Cell Division: A Basic Introduction<a id="cell-division-a-basic-introduction"></a>
+### **Transcriptomics**
 
-Authors (@slack): Richard Agyekum (@richard), Wale Joseph (@wale)
+Author: Nour Nahtay (@nournahtay)
 
-Cell division is a fundamental biological process by which a single cell divides into two or more daughter cells. This process is crucial for growth, development, and the maintenance of life in all living organisms. The two primary types of cell division are mitosis and meiosis, each serving distinct purposes within the body.
-
-
-### Mitosis: The Basis of Growth and Repair<a id="mitosis-the-basis-of-growth-and-repair"></a>
-
-Mitosis is the process through which a single cell divides to produce two genetically identical daughter cells. It is the method by which organisms grow, replace damaged tissues, and maintain healthy cell populations. Mitosis occurs in several stages: prophase, metaphase, anaphase, and telophase, followed by cytokinesis. During prophase, the cell's chromosomes condense and become visible, and the nuclear membrane breaks down. In metaphase, the chromosomes align at the cell's equatorial plane, and spindle fibers attach to the centromeres. Anaphase follows, where the sister chromatids are pulled apart to opposite poles of the cell. Finally, in telophase, the chromosomes reach the poles, and the nuclear membrane reforms around each set of chromosomes. Cytokinesis then divides the cytoplasm, resulting in two separate daughter cells.
-
-Mitosis ensures that each daughter cell receives an exact copy of the parent cell's DNA, making it vital for genetic consistency across cells. This consistency is essential for the functioning of tissues and organs, as any errors in DNA replication or distribution can lead to disorders such as cancer, where abnormal cell division occurs uncontrollably.
+Transcriptomics is the comprehensive study of all RNA transcripts expressed throughout the organism. The field encompasses analyzing RNA types, their functions, and expression levels under varying conditions, all of which contribute to the uncovering of the molecular nature of disorders like cancer, thus enhancing diagnosis and paving the way for new therapeutic strategies. (Dong et. al. 2013)
 
 
-### Meiosis: The Key to Genetic Diversity<a id="meiosis-the-key-to-genetic-diversity"></a>
+### **Transcripts and Cancer: An Overview on Etiology and a Case Study**
 
-Meiosis, on the other hand, is a specialized form of cell division that reduces the chromosome number by half, producing four genetically diverse daughter cells, each with a single set of chromosomes. This process is vital for sexual reproduction in eukaryotic organisms, as it generates gametes—sperm and eggs in animals, or pollen and ovules in plants.
+Cancer is an inherently disruptive disorder due to its equally disruptive mechanisms and hallmarks. A key driver of oncogenesis is the alteration of gene expression. When the DNA repair system experiences impairments, the simplest of alterations give rise to abnormal growths manifesting itself as Cancer. (Dong et. al. 2013) Research has shown that RNA alterations play significant roles in various cancer subtypes, such as lung adenocarcinoma. For instance, a multi-omics study of two LUAD cohorts uncovered 3688 aberrant alternative splicing events, primarily involving alternative promoter and exon skips. These AASEs induce RNA dysregulation by disrupting binding protein, which contributes to tumor proliferation and metastasis. (Wu et. al. 2022)
 
-Meiosis consists of two consecutive divisions: meiosis I and meiosis II. During meiosis I, homologous chromosomes pair up and exchange genetic material through a process called crossing over. This recombination creates genetic diversity by shuffling the genes between chromosomes. In meiosis II, similar to mitosis, the sister chromatids are separated, resulting in four unique haploid cells.
+
+### **Prominent Transcriptomics Techniques**
+
+The introduction of Microarray in the 90’s has revolutionized transcriptomics by enabling simultaneous quantification of RNA using fluorescent DNA probes on microchips. This technology has been proven proficient in tumor mRNA research, offering insights into gene expression levels in molecular pathways and aids in biomarker discovery. 
+
+![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXc0o2Vqc8nhE23g7ABDV5sJMgaYQnc0YNd6DS3ijVEkKzInriC4mC60grS_MBATasRqP4CjSyFdxBw9GylYr2KS9N7RYNh5hNhA_CKOjeUa2yNLLhp7uW8apcTPtgkvrMdk7lkffcdhaIiywLRXdMzweQ30?key=SMb5lmjOCJEYvWocJ2Jelw)
+
+_Figure 1: An Overview of Microarray Technique on Normal and Cancerous cells_
+
+The technology’s main downside, however, is that differing methodologies can lead to differing results, which is why microarrays are verified by RT-PCR or immunohistochemical analysis. It also requires prior knowledge of the sequence of the probe, which is where the next key player comes in.
+
+
+The introduction of the NGS technology in 2004 was a game changer in the omics field as it allowed for the seamless sequencing of whole genomes, exomes, RNA-seq and beyond without the tedious mundane work that came with sanger sequencing. The emergence of this technology led to a more high-throughput and precise gene expression analysis and also helped generate data on splicing variants, allelic expression, and RNA editing, covering major areas of transcriptomics with a higher accuracy and sensitivity in comparison to microarrays. (Supplitt, et. al 2022)
+
+### **Conclusion**
+
+In conclusion, transcriptomics is a revolutionary omics branch that has played massive contributions to oncological research from biomarker discovery to oncogenesis insight to therapeutic targets and beyond. The revolutionization of pharmacogenomics and precision medicine ensures that transcriptomics will remain a powerful tool for years on end, and it has led to the emergence of innovative RNA-based techniques, such as the RNA interference technique, which has already made groundbreaking advances in cancer therapy and more to come. (Tian et. al. 2021)
+
+**Word Count**: 403
+
+
+### **Citations**
+
+1. Dong, Z., Chen, Y. Transcriptomics: Advances and approaches. _Sci. China Life Sci._ **56**, 960–967 (2013). <https://doi.org/10.1007/s11427-013-4557-2>
+
+2. Wu, Q., Feng, L., Wang, Y. _et al._ Multi-omics analysis reveals RNA splicing alterations and their biological and clinical implications in lung adenocarcinoma. _Sig Transduct Target Ther_ **7**, 270 (2022). <https://doi.org/10.1038/s41392-022-01098-5>
+
+3. Supplitt, Stanislaw, Pawel Karpinski, Maria Sasiadek, and Izabela Laczmanska. 2021. "Current Achievements and Applications of Transcriptomics in Personalized Cancer Medicine" _International Journal of Molecular Sciences_ 22, no. 3: 1422. <https://doi.org/10.3390/ijms22031422>  
+
+4. Tian, Z., Liang, G., Cui, K., Liang, Y., Wang, Q., Lv, S., Cheng, X., & Zhang, L. (2021, February 3). Insight Into the Prospects for RNAi Therapy of Cancer. Frontiers. <https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2021.644718/full> , resulting in four unique haploid cells.
 
 
 ### Conclusion<a id="conclusion"></a>
