@@ -71,7 +71,7 @@ These findings offer major insight into the role of transcripts and their mutati
 
 **Video:**
 
-Editor: Ibrahim
+Presentation: Ibrahim, Nour & Salma
 
 Voice Over: Salma & Nour
 
