@@ -1,4 +1,6 @@
-Author: Nour Nahtay (@nournahtay) Ibrahim (@IbrahimFangary) Yara Haitham (@YaraHaitham) Salma Ismail (@Salmaismail28)
+***Large-scale RNA-Seq Transcriptome Analysis of 4043 Cancers and 548 Normal Tissue Controls across 12 TCGA Cancer Types***
+
+Authors: Nour Nahtay (@nournahtay) Ibrahim (@IbrahimFangary) Yara Haitham (@YaraHaitham) Salma Ismail (@Salmaismail28)
 
 @Salma
 
