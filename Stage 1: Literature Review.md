@@ -69,7 +69,7 @@ These findings offer major insight into the role of transcripts and their mutati
 
 **Article:** https\://www\.nature.com/articles/srep13413
 
-**Video:**
+**Video:** https://www.linkedin.com/posts/activity-7238223355798052864-egM4?utm_source=share&utm_medium=member_desktop
 
 Presentation: Ibrahim, Nour & Salma
 
