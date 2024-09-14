@@ -1,10 +1,11 @@
-### **The Gene Expression Interpretation & Downstream Functional Enrichment Analysis of Lactation Cells**
+# **The Gene Expression Interpretation & Downstream Functional Enrichment Analysis of Lactation Cells**
 
 Authors: Nour Nahtay (@NourNahtay) Onare Opeyemi Mary (@Onare)
 
 The aim of this paper is to interpret a dataset of 590+ gene expression results of lactation cells under different conditions.
+Dataset: https://raw.githubusercontent.com/HackBio-Internship/public_datasets/main/Cancer2024/pregnancyLactationCells.csv
 
-**Heatmap Generation**
+##**Heatmap Generation**
 
 We started off by loading, prepping the sample to generate a heatmap. We used two different color palettes, which gave the following results: 
 
