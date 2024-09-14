@@ -4,7 +4,7 @@ Authors: Nour Nahtay (@NourNahtay), Merylin Ogunlola (@MerylinO) Princess Beatri
 
 The aim of this paper is to interpret a dataset of 590+ gene expression results of lactation cells under different conditions.
 
-Dataset: https://raw.githubusercontent.com/HackBio-Internship/public_datasets/main/Cancer2024/pregnancyLactationCells.csv
+Dataset: https://raw.githubusercontent.com/HackBio-Internship/public_datasets/main/Cancer2024/glioblastoma.csv
 
 ## **Heatmap Generation**
 
@@ -49,8 +49,17 @@ _Figure 3: Bubble Plot of the Visualization Data_
 
 
 ## **The Top 3 Pathways**
+### Pathway 1: RNA Metabolism Regulation
+- **Description:** RNA metabolism regulation encompasses the processes that manage the synthesis, processing, modification, and degradation of RNA molecules, which are vital for protein production and gene expression. This pathway is essential for ensuring RNA levels are properly balanced in cells so that proteins are synthesized at appropriate times and quantities (Wilusz & Sharp, 2013).
 
-To prepare the data for functional enrichment analysis, we began by splitting the data into two groups, then getting the mean for each data in order to calculate the fold changes. We then calculated the P-values and used 
+- **Relevance:** In this study, genes associated with RNA metabolism were notably 
+enriched. This suggests that irregularities in RNA metabolism regulation may play a 
+significant role in the condition under investigation, such as cancer or 
+developmental disorders.
+- **Significance:** With an FDR of 0.0193, this pathway is considered highly 
+significant. The enrichment observed might indicate that disruptions in RNA 
+metabolism are a key factor driving the observed changes in gene expression, 
+potentially highlighting targets for therapeutic strategies
 
 
 
