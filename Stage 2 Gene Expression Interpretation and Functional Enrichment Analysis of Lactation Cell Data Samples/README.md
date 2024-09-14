@@ -36,6 +36,7 @@ The following functional enrichment analysis tools can be used for this analysis
         c. subset the genes according to the p-value and fold change of choice.
 3. Visualize the fold change and negative log of p-values to observe the split
 4. Extract the geneIDs into a txt file and paste the list into the functional enrichment site of choice. In this project, we've used PANTHER as the main site, and ShinyGO for conformation. We've configured the website to provide us with pathways under the GOdatabase with a FDR cutoff of 0.05.
+        We've only used the upregulated genes for this project. The steps are applicable for both datas separately or together
 
 ### **Functional Enrichment Analysis Visualization**
 1. Group the pathway name, the number of genes, and the negative log10 of the FDR generated from the website
@@ -44,3 +45,5 @@ The following functional enrichment analysis tools can be used for this analysis
    b. Line plot
    c. Bubble plot
    d. Dot plot
+
+Happy Analyzing!
