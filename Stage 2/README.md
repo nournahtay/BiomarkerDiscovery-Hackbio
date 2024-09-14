@@ -28,6 +28,7 @@ The following functional enrichment analysis tools can be used for this analysis
      The heatmap is completely customizable, from removing dendrograms, to alternating the scale, to the color palette used and more.
      For other color palette options, use https://colorspace.r-forge.r-project.org/articles/hcl_palettes.html
      If you recieve an error related to the margains, simply move make the plot display larger with your pointer.
+     If you face any issues with the graphic display, used dev.off()
 
 ### **Functional Enrichment Analysis**
 1. The data is separated into two groups according to column names, as these describe the varying conditions used for this analysis
