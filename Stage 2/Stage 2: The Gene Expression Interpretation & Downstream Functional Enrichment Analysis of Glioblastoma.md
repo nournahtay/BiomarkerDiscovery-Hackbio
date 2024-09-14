@@ -1,8 +1,8 @@
-# **The Gene Expression Interpretation & Downstream Functional Enrichment Analysis of Lactation Cells**
+# **The Gene Expression Interpretation & Downstream Functional Enrichment Analysis of Glioblastoma**
 
 Authors: Nour Nahtay (@NourNahtay), Merylin Ogunlola (@MerylinO) Princess Beatrice Sunday-Jimmy (@LaidyCharm), Onare Opeyemi Mary (@Onare)
 
-The aim of this paper is to interpret a dataset of 590+ gene expression results of lactation cells under different conditions.
+The aim of this analysis is to interpret a glioblastoma gene expression dataset and study the pathways affected by these genes.
 
 Dataset: https://raw.githubusercontent.com/HackBio-Internship/public_datasets/main/Cancer2024/glioblastoma.csv
 
