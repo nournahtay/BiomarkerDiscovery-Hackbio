@@ -6,6 +6,8 @@ This project is centered around the analysis of a pregnancy and lactation cells 
 2. Functional enrichment analysis on the upregulated genes
 3. Visualization of the functional enrichment analysis results
 
+Dataset: https://raw.githubusercontent.com/HackBio-Internship/public_datasets/main/Cancer2024/pregnancyLactationCells.csv
+
 You will need the following packages on R:
 1. gplots - Heatmap generation: 
 2. dplyr - Data manipulation
