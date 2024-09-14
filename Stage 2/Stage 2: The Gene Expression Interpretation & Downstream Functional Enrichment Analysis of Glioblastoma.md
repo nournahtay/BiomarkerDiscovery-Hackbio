@@ -1,8 +1,8 @@
 # **The Gene Expression Interpretation & Downstream Functional Enrichment Analysis of Glioblastoma**
 
-Authors: Nour Nahtay (@NourNahtay), Merylin Ogunlola (@MerylinO), Titilola Shittu (@lola), Princess Beatrice Sunday-Jimmy (@LaidyCharm), Onare Opeyemi Mary (@Onare), Igwebuike Oluchukwu Vivian (@igwebuikevee0000)
+Authors: Nour Nahtay (@NourNahtay), Merylin Ogunlola (@MerylinO), Igwebuike Oluchukwu Vivian (@igwebuikevee0000), Titilola Shittu (@lola), Princess Beatrice Sunday-Jimmy (@LaidyCharm), Onare Opeyemi Mary (@Onare)
 
-The aim of this analysis is to interpret a glioblastoma gene expression dataset and study the pathways affected by these genes.
+The aim of this analysis is to interpret a glioblastoma gene expression dataset and study their pathway involvement.
 
 Dataset: https://raw.githubusercontent.com/HackBio-Internship/public_datasets/main/Cancer2024/glioblastoma.csv
 
@@ -18,7 +18,7 @@ _Figure 1: Heatmap with Diverging Palette_
 
 _Figure 2: Heatmap with Sequential Palette_
 
-The heatmap with the diverging palette offers a more pleasant-to-the-eye interface that allows the viewer to easily distinguish between the over and underexpressed genes As opposed to the sequential palette, which is not as insightful.
+The heatmap with the diverging palette offers a more pleasant-to-the-eye interface that allows the viewer to easily distinguish between the over and underexpressed genes, as opposed to the sequential palette, which was not as insightful.
 
 
 ## **Functional Enrichment Analysis**
@@ -49,13 +49,13 @@ _Figure 3: Bubble Plot of the Visualization Data_
 ## **The Top 3 Pathways**
 
 ### Pathway 1: RNA Metabolism Regulation
-In glioblastoma, RNA metabolism is notably disrupted, impacting tumor growth and treatment resistance. Abnormal RNA processing, including faulty splicing and modifications, results in defective proteins that drive tumor progression. GBM cells often exhibit abnormal alternative splicing, which affects crucial cellular processes and promotes malignancy. Additionally, altered RNA modifications can influence mRNA stability and translation, further contributing to tumor aggressiveness. Non-coding RNAs, such as microRNAs and long non-coding RNAs, are also deregulated, affecting gene expression and chromatin structure. (Dong & Cui, 2019).
+In glioblastoma, RNA metabolism is notably disrupted, impacting tumor growth and treatment resistance. Abnormal RNA processing, including faulty splicing and modifications, results in defective proteins that drive tumor progression. GBM cells often exhibit abnormal alternative splicing, which affects crucial cellular processes and promotes malignancy. Additionally, altered RNA modifications can influence mRNA stability and translation, further contributing to tumor aggressiveness. Non-coding RNAs, such as microRNAs and long non-coding RNAs, are also deregulated, affecting gene expression and chromatin structure. _(Dong & Cui, 2019)_
 
 ### Pathway 2: RNA Biosynthesis Regulation
-RNA biosynthesis involves transcription of pre-mRNA, which undergoes multiple post-transcriptional modifications, including splicing. Splicing removes introns and joins exons, resulting in mature mRNA that is translated into proteins. Kim et al. highlight aberrant RNA splicing in glioblastoma, focusing on the role of the SON protein, which influences the splicing machinery—an essential component of RNA biosynthesis. (Kim et al., 2021)
+RNA biosynthesis involves transcription of pre-mRNA, which undergoes multiple post-transcriptional modifications, including splicing. Splicing removes introns and joins exons, resulting in mature mRNA that is translated into proteins. Kim et al. highlight aberrant RNA splicing in glioblastoma, focusing on the role of the SON protein, which influences the splicing machinery—an essential component of RNA biosynthesis. _(Kim et al., 2021)_
 
 ### Pathway 3: Regulation of Transcription by RNA Polymerase II
-RNA Polymerase II transcribes DNA into mRNA in eukaryotic cells, and its regulation ensures genes are expressed appropriately. In glioblastoma, G9a enhances the transcription of the TCF12 gene by activating p-STAT3, which recruits RNA Polymerase II to its target promoters. This boosts the transcription of genes involved in tumor progression and radio-resistance. By modulating chromatin accessibility via histone modification, G9a indirectly controls Pol II's efficiency in transcribing oncogenic genes, contributing to glioblastoma's aggressive nature and linking epigenetic regulation to Pol II-driven gene expression. (Li et al., 2023)
+RNA Polymerase II transcribes DNA into mRNA in eukaryotic cells, and its regulation ensures genes are expressed appropriately. In glioblastoma, G9a enhances the transcription of the TCF12 gene by activating p-STAT3, which recruits RNA Polymerase II to its target promoters. This boosts the transcription of genes involved in tumor progression and radio-resistance. By modulating chromatin accessibility via histone modification, G9a indirectly controls Pol II's efficiency in transcribing oncogenic genes, contributing to glioblastoma's aggressive nature and linking epigenetic regulation to Pol II-driven gene expression. _(Li et al., 2023)_
 
 
 #### **Citations:**
@@ -74,4 +74,4 @@ https://doi.org/10.1038/s41467-021-25892-x
 5. Li, X.-L., Xie, Y., Chen, Y.-L., Zhang, Z.-M., Tao, Y.-F., Li, G., Wu, D., Wang, H.-R., Zhuo, R., Pan, J.-J., Yu, J.-J., Jia, S.-Q., Zhang, Z., Feng, C.-X., Wang, J.-W., Fang, F., Qian, G.-H., Lu, J., Hu, S.-Y., ... Pan, J. (2023). The RNA polymerase II subunit B (RPB2) functions as a growth regulator in human glioblastoma. Biochemical and Biophysical Research Communications, 674, 170–182. 
 https://doi.org/10.1016/j.bbrc.2023.06.088
 
-#### **Word Count:** 398 (excluding in-text citations)
+#### **Word Count:** 395 (excluding in-text citations)
