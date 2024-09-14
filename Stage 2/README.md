@@ -43,9 +43,9 @@ The following functional enrichment analysis tools can be used for this analysis
 ### **Functional Enrichment Analysis Visualization**
 1. Group the pathway name, the number of genes, and the negative log10 of the FDR generated from the website
 2. Generate a simple plot using ggplot2. The plot can be customizable. Some of the simple plots can be:
-   a. Lollipop plot
-   b. Line plot
-   c. Bubble plot
-   d. Dot plot
+        a. Lollipop plot
+        b. Line plot
+        c. Bubble plot
+        d. Dot plot
 
 Happy Analyzing!
