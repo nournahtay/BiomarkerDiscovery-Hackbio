@@ -1,6 +1,6 @@
 # **The Gene Expression Interpretation & Downstream Functional Enrichment Analysis of Lactation Cells**
 
-Authors: Nour Nahtay (@NourNahtay), Princess Beatrice Sunday-Jimmy (@LaidyCharm), Onare Opeyemi Mary (@Onare)
+Authors: Nour Nahtay (@NourNahtay), Merylin Ogunlola (@MerylinO) Princess Beatrice Sunday-Jimmy (@LaidyCharm), Onare Opeyemi Mary (@Onare)
 
 The aim of this paper is to interpret a dataset of 590+ gene expression results of lactation cells under different conditions.
 Dataset: https://raw.githubusercontent.com/HackBio-Internship/public_datasets/main/Cancer2024/pregnancyLactationCells.csv
