@@ -23,12 +23,12 @@ The following functional enrichment analysis tools can be used for this analysis
 
 ### **Gene Expression Interpretation**
 1. The URL is to be pasted directly onto RStudio, then read using read.csv
-     You can customize the rows and columns to be included using row.names or col.names
+     - You can customize the rows and columns to be included using row.names or col.names
 2. Heatmaps are generated using heatmap.2() from gplots. Please note that the dataset is directly converted to the matrix form using as.matrix() 
-     The heatmap is completely customizable, from removing dendrograms, to alternating the scale, to the color palette used and more.
-     For other color palette options, use https://colorspace.r-forge.r-project.org/articles/hcl_palettes.html
-     If you recieve an error related to the margains, simply move make the plot display larger with your pointer.
-     If you face any issues with the graphic display, used dev.off()
+     - The heatmap is completely customizable, from removing dendrograms, to alternating the scale, to the color palette used and more.
+     - For other color palette options, use https://colorspace.r-forge.r-project.org/articles/hcl_palettes.html
+     - If you recieve an error related to the margains, simply move make the plot display larger with your pointer.
+     - If you face any issues with the graphic display, used dev.off()
 
 ### **Functional Enrichment Analysis**
 1. The data is separated into two groups according to column names, as these describe the varying conditions used for this analysis
@@ -38,7 +38,7 @@ The following functional enrichment analysis tools can be used for this analysis
         c. subset the genes according to the p-value and fold change of choice.
 3. Visualize the fold change and negative log of p-values to observe the split
 4. Extract the geneIDs into a txt file and paste the list into the functional enrichment site of choice. In this project, we've used PANTHER as the main site, and ShinyGO for conformation. We've configured the website to provide us with pathways under the GOdatabase with a FDR cutoff of 0.05.
-        We've only used the upregulated genes for this project. The steps are applicable for both datas separately or together
+        - We've only used the upregulated genes for this project. The steps are applicable for both datas separately or together
 
 ### **Functional Enrichment Analysis Visualization**
 1. Group the pathway name, the number of genes, and the negative log10 of the FDR generated from the website
