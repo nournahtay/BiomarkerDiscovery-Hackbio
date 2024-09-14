@@ -1,59 +1,51 @@
+#Load gplots for heatmap visualization
 library(gplots)
 
+#Load the dataset and read it in the form of CSV
 url <- "https://raw.githubusercontent.com/HackBio-Internship/public_datasets/main/Cancer2024/glioblastoma.csv"
 gene_data <- read.csv(url, row.names = 1)
 
-# show first few rows
+#Show the first few rows
 head(gene_data)
 
-# view data
-# View(gene_data)
-# generate heatmap
-heatmap.2(as.matrix(gene_data), trace = 'none')
+#View the data
+View(gene_data)
 
-# scaling
-heatmap.2(as.matrix(gene_data), trace = 'none', 
-          scale='row', dendrogram = 'col', 
-          Colv = TRUE, Rowv = FALSE)
-
-# adding colors (diverging colour palettes)
-heatmap.2(as.matrix(gene_data), trace = 'none', 
+#Generate a heat map with a diverging palette.
+heatmap.2(as.matrix(gene_data), trace = 'none', #Data is simultaneously converted into matrix form) 
           scale='row', dendrogram = 'col', 
           Colv = TRUE, Rowv = FALSE,
             col=hcl.colors(100, palette = 'Blue-Red 3'))
 
-
-dev.off()
-
-# adding colors (sequential colour palettes)
+#Generate a heat map with a diverging palette.
 heatmap.2(as.matrix(gene_data), trace = 'none', 
           scale='row', dendrogram = 'col', 
           Colv = TRUE, Rowv = FALSE,
           col=hcl.colors(100, palette = 'Purples 3'))
 
-# getting column names
+#Extract column names
 colnames(gene_data)
 
-# selecting groups by index positions
+#Selecting groups by index positions
 group1 <- c(1,2,3,4,5)
 group2 <- c(6,7,8,9,10)
 
-# get groups 1 & 2 data (The groups behave similarly)
+#Get groups 1 & 2 data (The groups behave similarly)
 group1_data <- gene_data[, group1] #2005.01
 group2_data <- gene_data[, group2] #1849.01
 
-# get means
+#Get & view the means
 group1_mean <- rowMeans(group1_data)
 group2_mean <- rowMeans(group2_data)
 
 group1_mean
 group2_mean
 
-# get fold change
+#Get & view the fold change
 fold_change <- log2(group2_mean) - log2(group1_mean)  
 fold_change
 
-# get p-values
+#Get & view the p-values
 pvalues <- apply(gene_data, 1, function(row) {
   t.test(row[1:5], row[6:10])$p.value
   
@@ -61,9 +53,10 @@ pvalues <- apply(gene_data, 1, function(row) {
 
 pvalues
 
-# visualize the fold change and negative log of p-values
+#Visualize the fold change and negative log of p-values
 plot(fold_change, -log10(pvalues))
 
+#Load dplyr for data manipulation
 library(dplyr)
 
 # Subset upregulated genes
@@ -131,7 +124,7 @@ ggplot(top_pathways, aes(x = reorder(Pathway, nGenes), y = nGenes)) +
   theme_minimal() +
   coord_flip()
 
-# Line plot with point size representing -log10(FDR)
+#Creat a Line plot
 ggplot(top_pathways, aes(x = reorder(Pathway, nGenes), y = nGenes, group = 1)) +
   geom_line(color = "darkgrey") +
   geom_point(aes(size = neg_log_fdr), color = "blue") +
@@ -142,7 +135,7 @@ ggplot(top_pathways, aes(x = reorder(Pathway, nGenes), y = nGenes, group = 1)) +
   theme_minimal() +
   coord_flip()
 
-# Bubble plot where point size and color represent -log10(FDR)
+#Create a Bubble plot
 ggplot(top_pathways, aes(x = reorder(Pathway, nGenes), y = nGenes)) +
   geom_point(aes(size = neg_log_fdr, color = neg_log_fdr)) +
   scale_color_gradient(low = "lightblue", high = "darkblue") +
