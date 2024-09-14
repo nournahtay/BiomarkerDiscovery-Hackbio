@@ -8,7 +8,7 @@ Dataset: https://raw.githubusercontent.com/HackBio-Internship/public_datasets/ma
 
 ## **Heatmap Generation**
 
-We started off by loading and prepping the sample to generate a heatmap. We used two different color palettes, which gave the following results: 
+Dataset is loaded and prepped for heatmap generation. We used two different color palettes, which gave the following results: 
 
 ![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXedKXuYM-hEneadDyKc0Zx6rVI_SPfTEOK1NWAXvPaKV3FghnFmkGyRmYkKWv0iPShka8CrcU5r5O_oEROaaKtcW3sDthiprz4sosdzzCaFVAKQV4QPzCvzddQ2UfFgcP7sRYb-SNBQFcjGmKfnc3J3o0PB?key=DtMktn_nuLAIngoboGJAwA)
 
@@ -18,16 +18,14 @@ _Figure 1: Heatmap with Diverging Palette_
 
 _Figure 2: Heatmap with Sequential Palette_
 
-The heatmap with the diverging palette offers a more pleasant-to-the-eye interface that allows the viewer to easily distinguish between the over and underexpressed genes. Although the differing hues of the sequential palette could somewhat give insight on the changes, operating with one color is not preferable. 
+The heatmap with the diverging palette offers a more pleasant-to-the-eye interface that allows the viewer to easily distinguish between the over and underexpressed genes As opposed to the sequential palette, which is not as insightful.
 
 
 ## **Functional Enrichment Analysis**
 
-To prepare the data for functional enrichment analysis, we began by splitting the data into two groups, then retrieving the mean for each data in order to calculate the fold changes. We then calculated the P-values and used them - along with the fold changes - to subset the upregulated and down regulated genes. 
+To perform functional enrichment analysis, the data is split into two groups to calculate the p-values, and the means needed to calculate the fold change. The p-values and fold changes will be used as cutoff to subset up and down regulated genes. 
 
-Upregulated: (fold change > 2 & P-Values < 0.2) & Downregulated: (fold change < -2 & p values < 0.2)
-
-For this analysis, we decided to focus on the upregulated genes, and to perform functional enrichment analysis using PANTHER _(Mi & Thomas)_, then ShinyGo _(Ge, Jung & Yao)_ for confirmation. We used the GO database and an FDR of <0.05 for both websites to ensure consistency and high significance.
+Functional enrichment for this task was performed on the upregulated genes only using PANTHER _(Mi & Thomas)_, then ShinyGo _(Ge, Jung & Yao)_ for confirmation. We used the GO database and an FDR of <0.05 for both websites to ensure consistency and high significance.
 
 ![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdawvKFZC0icpoxg237ekTDEeexyWiAZ3DNaiuqhhWcnsaixFNF2mTsUE6OuNNKJc0CUCq9Oq3jUwUwetL8FLGEu_Fvgjha1abdQ0wmmQ1AN4i4110aRu9oizGqjkWxhSf_ENKHjJlLv2fchFyYRgbh_4b1?key=DtMktn_nuLAIngoboGJAwA)
 
@@ -37,7 +35,7 @@ __![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXcoAUfhjEb_VoF_voqfb2GDrbS
 
 _Table 2: Functional Enrichment Analysis Using ShinyGO_
 
-The top 5 pathways, number of genes involved, and the negative log 10 of FDR were extracted and used for visualization in the form of a bubble plot
+The top 5 pathways, number of genes involved, and the negative log 10 of FDR were extracted and used for visualization in the form of a bubble plot.
 
 ![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXckKL78-IOFmOOXPZswBM64uHr6sVcgmFKbWm6u2u_By2gul1V9e0DlCLX_W_0wkEomzEiDymxLLYOY_n_qNtemHNjjD6nw1F-_2F8irI9yhvKuUfSZ9gbx9v8DXSPGzAL4JZze-wNFy_LBycsi_NM79iwd?key=DtMktn_nuLAIngoboGJAwA)
 
@@ -49,18 +47,15 @@ _Figure 3: Bubble Plot of the Visualization Data_
 
 
 ## **The Top 3 Pathways**
+
 ### Pathway 1: RNA Metabolism Regulation
-- **Description:** RNA metabolism regulation encompasses the processes that manage the synthesis, processing, modification, and degradation of RNA molecules, which are vital for protein production and gene expression. This pathway is essential for ensuring RNA levels are properly balanced in cells so that proteins are synthesized at appropriate times and quantities (Wilusz & Sharp, 2013).
+In glioblastoma, RNA metabolism is notably disrupted, impacting tumor growth and treatment resistance. Abnormal RNA processing, including faulty splicing and modifications, results in defective proteins that drive tumor progression. GBM cells often exhibit abnormal alternative splicing, which affects crucial cellular processes and promotes malignancy. Additionally, altered RNA modifications can influence mRNA stability and translation, further contributing to tumor aggressiveness. Non-coding RNAs, such as microRNAs and long non-coding RNAs, are also deregulated, affecting gene expression and chromatin structure. (Dong & Cui, 2019).
 
-- **Relevance:** In this study, genes associated with RNA metabolism were notably 
-enriched. This suggests that irregularities in RNA metabolism regulation may play a 
-significant role in the condition under investigation, such as cancer or 
-developmental disorders.
-- **Significance:** With an FDR of 0.0193, this pathway is considered highly 
-significant. The enrichment observed might indicate that disruptions in RNA 
-metabolism are a key factor driving the observed changes in gene expression, 
-potentially highlighting targets for therapeutic strategies
+### Pathway 2: RNA Biosynthesis Regulation
+RNA biosynthesis involves transcription of pre-mRNA, which undergoes multiple post-transcriptional modifications, including splicing. Splicing removes introns and joins exons, resulting in mature mRNA that is translated into proteins. Kim et al. highlight aberrant RNA splicing in glioblastoma, focusing on the role of the SON protein, which influences the splicing machinery—an essential component of RNA biosynthesis. (Kim et al., 2021)
 
+### Pathway 3: Regulation of Transcription by RNA Polymerase II
+RNA Polymerase II transcribes DNA into mRNA in eukaryotic cells, and its regulation ensures genes are expressed appropriately. In glioblastoma, G9a enhances the transcription of the TCF12 gene by activating p-STAT3, which recruits RNA Polymerase II to its target promoters. This boosts the transcription of genes involved in tumor progression and radio-resistance. By modulating chromatin accessibility via histone modification, G9a indirectly controls Pol II's efficiency in transcribing oncogenic genes, contributing to glioblastoma's aggressive nature and linking epigenetic regulation to Pol II-driven gene expression. (Li et al., 2023)
 
 
 #### **Citations:**
@@ -68,5 +63,15 @@ potentially highlighting targets for therapeutic strategies
 1. Mi H, Thomas P. PANTHER pathway: an ontology-based pathway database coupled with data analysis tools. Methods Mol Biol. 2009;563:123-40. doi: 10.1007/978-1-60761-175-2\_7. PMID: 19597783; PMCID: PMC6608593.
 
 2. Ge SX, Jung D, Yao R. ShinyGO: a graphical gene-set enrichment tool for animals and plants. Bioinformatics. 2020 Apr 15;36(8):2628-2629. doi: 10.1093/bioinformatics/btz931. PMID: 31882993; PMCID: PMC7178415.
+   
+3. Dong, Z., & Cui, H. (2019). Epigenetic modulation of metabolism in glioblastoma. Seminars in Cancer Biology, 57, 45–51.
+https://doi.org/10.1016/j.semcancer.2018.09.002
 
-#### **Word Count:**
+4. Kim, J.-H., Jeong, K., Li, J., Murphy, J. M., Vukadin, L., Stone, J. K., Richard, A., Tran, J., Gillespie, G. Y., Flemington, E. K., Sobol, R. W., Lim, S.-T. S., & Ahn, E.-Y. E. 
+(2021). SON drives oncogenic RNA splicing in glioblastoma by regulating PTBP1/PTBP2 switching and RBFOX2 activity. Nature Communications, 12(1), 5551.
+https://doi.org/10.1038/s41467-021-25892-x
+
+5. Li, X.-L., Xie, Y., Chen, Y.-L., Zhang, Z.-M., Tao, Y.-F., Li, G., Wu, D., Wang, H.-R., Zhuo, R., Pan, J.-J., Yu, J.-J., Jia, S.-Q., Zhang, Z., Feng, C.-X., Wang, J.-W., Fang, F., Qian, G.-H., Lu, J., Hu, S.-Y., ... Pan, J. (2023). The RNA polymerase II subunit B (RPB2) functions as a growth regulator in human glioblastoma. Biochemical and Biophysical Research Communications, 674, 170–182. 
+https://doi.org/10.1016/j.bbrc.2023.06.088
+
+#### **Word Count:** 398 (excluding in-text citations)
