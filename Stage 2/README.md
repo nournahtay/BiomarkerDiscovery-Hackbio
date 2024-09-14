@@ -33,19 +33,19 @@ The following functional enrichment analysis tools can be used for this analysis
 ### **Functional Enrichment Analysis**
 1. The data is separated into two groups according to column names, as these describe the varying conditions used for this analysis
 2. To subset the groups into upregulated and downregulated genes:
-        a. calculate the fold changes using means. There are many possible formulas for this, but the log2 formula was used to accurately display the difference between the over and under expressed genes
-        b. calculate the p-value using the t.test forumla
-        c. subset the genes according to the p-value and fold change of choice.
-3. Visualize the fold change and negative log of p-values to observe the split
-4. Extract the geneIDs into a txt file and paste the list into the functional enrichment site of choice. In this project, we've used PANTHER as the main site, and ShinyGO for conformation. We've configured the website to provide us with pathways under the GOdatabase with a FDR cutoff of 0.05.
+     - calculate the fold changes using means. There are many possible formulas for this, but the log2 formula was used to accurately display the difference between the over and under expressed genes
+     - calculate the p-value using the t.test forumla
+     - subset the genes according to the p-value and fold change of choice.
+4. Visualize the fold change and negative log of p-values to observe the split
+5. Extract the geneIDs into a txt file and paste the list into the functional enrichment site of choice. In this project, we've used PANTHER as the main site, and ShinyGO for conformation. We've configured the website to provide us with pathways under the GOdatabase with a FDR cutoff of 0.05.
         - We've only used the upregulated genes for this project. The steps are applicable for both datas separately or together
 
 ### **Functional Enrichment Analysis Visualization**
 1. Group the pathway name, the number of genes, and the negative log10 of the FDR generated from the website
 2. Generate a simple plot using ggplot2. The plot can be customizable. Some of the simple plots can be:
-        a. Lollipop plot
-        b. Line plot
-        c. Bubble plot
-        d. Dot plot
+     - Lollipop plot
+     - Line plot
+     - Bubble plot
+     - Dot plot
 
 Happy Analyzing!
