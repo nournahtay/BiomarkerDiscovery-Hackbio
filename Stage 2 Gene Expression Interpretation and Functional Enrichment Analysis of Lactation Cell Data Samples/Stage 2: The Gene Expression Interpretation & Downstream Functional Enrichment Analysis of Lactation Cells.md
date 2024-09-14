@@ -3,11 +3,12 @@
 Authors: Nour Nahtay (@NourNahtay), Merylin Ogunlola (@MerylinO) Princess Beatrice Sunday-Jimmy (@LaidyCharm), Onare Opeyemi Mary (@Onare)
 
 The aim of this paper is to interpret a dataset of 590+ gene expression results of lactation cells under different conditions.
+
 Dataset: https://raw.githubusercontent.com/HackBio-Internship/public_datasets/main/Cancer2024/pregnancyLactationCells.csv
 
 ## **Heatmap Generation**
 
-We started off by loading, prepping the sample to generate a heatmap. We used two different color palettes, which gave the following results: 
+We started off by loading and prepping the sample to generate a heatmap. We used two different color palettes, which gave the following results: 
 
 ![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXedKXuYM-hEneadDyKc0Zx6rVI_SPfTEOK1NWAXvPaKV3FghnFmkGyRmYkKWv0iPShka8CrcU5r5O_oEROaaKtcW3sDthiprz4sosdzzCaFVAKQV4QPzCvzddQ2UfFgcP7sRYb-SNBQFcjGmKfnc3J3o0PB?key=DtMktn_nuLAIngoboGJAwA)
 
@@ -22,11 +23,11 @@ The heatmap with the diverging palette offers a more pleasant-to-the-eye interfa
 
 ## **Functional Enrichment Analysis**
 
-To prepare the data for functional enrichment analysis, we began by splitting the data into two groups, then getting the mean for each data in order to calculate the fold changes. We then calculated the P-values and used them - along with the fold changes - to subset the upregulated and down regulated genes. 
+To prepare the data for functional enrichment analysis, we began by splitting the data into two groups, then retrieving the mean for each data in order to calculate the fold changes. We then calculated the P-values and used them - along with the fold changes - to subset the upregulated and down regulated genes. 
 
 Upregulated: (fold change > 2 & P-Values < 0.2) & Downregulated: (fold change < -2 & p values < 0.2)
 
-For this analysis, we decided to focus on the upregulated genes, and to perform functional enrichment analysis using PANTHER _(Mi & Thomas)_, then ShinyGo _(Ge, Jung & Yao)_ for confirmation. We used the GO database and an FDR of <0.05 for both databases to ensure consistency and significance.
+For this analysis, we decided to focus on the upregulated genes, and to perform functional enrichment analysis using PANTHER _(Mi & Thomas)_, then ShinyGo _(Ge, Jung & Yao)_ for confirmation. We used the GO database and an FDR of <0.05 for both websites to ensure consistency and high significance.
 
 ![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdawvKFZC0icpoxg237ekTDEeexyWiAZ3DNaiuqhhWcnsaixFNF2mTsUE6OuNNKJc0CUCq9Oq3jUwUwetL8FLGEu_Fvgjha1abdQ0wmmQ1AN4i4110aRu9oizGqjkWxhSf_ENKHjJlLv2fchFyYRgbh_4b1?key=DtMktn_nuLAIngoboGJAwA)
 
@@ -53,9 +54,10 @@ To prepare the data for functional enrichment analysis, we began by splitting th
 
 
 
-### **Citations**
+### **Citations:**
 
 1. Mi H, Thomas P. PANTHER pathway: an ontology-based pathway database coupled with data analysis tools. Methods Mol Biol. 2009;563:123-40. doi: 10.1007/978-1-60761-175-2\_7. PMID: 19597783; PMCID: PMC6608593.
 
 2. Ge SX, Jung D, Yao R. ShinyGO: a graphical gene-set enrichment tool for animals and plants. Bioinformatics. 2020 Apr 15;36(8):2628-2629. doi: 10.1093/bioinformatics/btz931. PMID: 31882993; PMCID: PMC7178415.
 
+### **Word Count:**
