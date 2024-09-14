@@ -17,7 +17,7 @@ heatmap.2(as.matrix(gene_data), trace = 'none', #Data is simultaneously converte
           Colv = TRUE, Rowv = FALSE,
             col=hcl.colors(100, palette = 'Blue-Red 3'))
 
-#Generate a heat map with a diverging palette.
+#Generate a heat map with a sequential palette.
 heatmap.2(as.matrix(gene_data), trace = 'none', 
           scale='row', dendrogram = 'col', 
           Colv = TRUE, Rowv = FALSE,
@@ -42,7 +42,8 @@ group1_mean
 group2_mean
 
 #Get & view the fold change
-fold_change <- log2(group2_mean) - log2(group1_mean)  
+fold_change <- log2(group2_mean) - log2(group1_mean) 
+
 fold_change
 
 #Get & view the p-values
