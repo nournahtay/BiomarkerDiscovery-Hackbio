@@ -5,7 +5,7 @@ Authors: Nour Nahtay (@NourNahtay) Onare Opeyemi Mary (@Onare)
 The aim of this paper is to interpret a dataset of 590+ gene expression results of lactation cells under different conditions.
 Dataset: https://raw.githubusercontent.com/HackBio-Internship/public_datasets/main/Cancer2024/pregnancyLactationCells.csv
 
-##**Heatmap Generation**
+## **Heatmap Generation**
 
 We started off by loading, prepping the sample to generate a heatmap. We used two different color palettes, which gave the following results: 
 
@@ -20,7 +20,7 @@ _Figure 2: Heatmap with Sequential Palette_
 The heatmap with the diverging palette offers a more pleasant-to-the-eye interface that allows the viewer to easily distinguish between the over and underexpressed genes. Although the differing hues of the sequential palette could somewhat give insight on the changes, operating with one color is not preferable. 
 
 
-### **Functional Enrichment Analysis**
+## **Functional Enrichment Analysis**
 
 To prepare the data for functional enrichment analysis, we began by splitting the data into two groups, then getting the mean for each data in order to calculate the fold changes. We then calculated the P-values and used them - along with the fold changes - to subset the upregulated and down regulated genes. 
 
@@ -47,7 +47,7 @@ __![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXfcFV9oRt1kAuoylyG5VwBpeoC
 _Figure 3: Bubble Plot of the Visualization Data_
 
 
-### **The Top 3 Pathways**
+## **The Top 3 Pathways**
 
 To prepare the data for functional enrichment analysis, we began by splitting the data into two groups, then getting the mean for each data in order to calculate the fold changes. We then calculated the P-values and used 
 
