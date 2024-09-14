@@ -1,4 +1,4 @@
-# **The Gene Expression Interpretation & Downstream Functional Enrichment Analysis of Glioblastoma**
+# **The Gene Expression Interpretation & Downstream Functional Enrichment Analysis of Glioblastoma** 
 
 Authors: Nour Nahtay (@NourNahtay), Merylin Ogunlola (@MerylinO), Igwebuike Oluchukwu Vivian (@igwebuikevee0000), Titilola Shittu (@lola), Princess Beatrice Sunday-Jimmy (@LaidyCharm), Onare Opeyemi Mary (@Onare)
 
