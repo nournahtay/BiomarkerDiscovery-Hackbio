@@ -1,12 +1,13 @@
-# **The Gene Expression Interpretation & Downstream Functional Enrichment Analysis of Lactation Cells**
+# **The Gene Expression Interpretation & Downstream Functional Enrichment Analysis of Glioblastoma**
 
 ## **Description**
-This project is centered around the analysis of a pregnancy and lactation cells gene expression dataset. The project is split into two parts:
+This project is centered around the analysis of a Glioblastoma gene expression dataset. The project is split into two parts:
 1. Interpretation of the gene expression data set using RStudio
 2. Functional enrichment analysis on the upregulated genes
 3. Visualization of the functional enrichment analysis results using RStudio
 
-Dataset: https://raw.githubusercontent.com/HackBio-Internship/public_datasets/main/Cancer2024/pregnancyLactationCells.csv
+Dataset:https://raw.githubusercontent.com/HackBio-Internship/public_datasets/main/Cancer2024/glioblastoma.csv
+
 
 You will need the following packages on RStudio:
 1. gplots - Heatmap generation: 
