@@ -1,6 +1,7 @@
 ### **The Gene Expression Interpretation & Downstream Functional Enrichment Analysis of Lactation Cells**
 
 Authors: Nour Nahtay (@NourNahtay) Onare Opeyemi Mary (@Onare)
+
 The aim of this paper is to interpret a dataset of 590+ gene expression results of lactation cells under different conditions.
 
 **Heatmap Generation**
