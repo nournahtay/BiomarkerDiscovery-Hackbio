@@ -104,7 +104,7 @@ top_pathways$neg_log_fdr <- -log10(top_pathways$FDR)
 
 library(ggplot2)
 
-#Creating a Lollipop plor
+#Creating a Lollipop plot
 ggplot(top_pathways, aes(x = reorder(Pathway, nGenes), y = nGenes)) +
   geom_segment(aes(x = Pathway, xend = Pathway, y = 0, yend = nGenes), color = "grey") +
   geom_point(aes(size = neg_log_fdr), color = "blue") +
