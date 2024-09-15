@@ -125,7 +125,7 @@ ggplot(top_pathways, aes(x = reorder(Pathway, nGenes), y = nGenes)) +
   theme_minimal() +
   coord_flip()
 
-#Creat a Line plot
+#Create a Line plot
 ggplot(top_pathways, aes(x = reorder(Pathway, nGenes), y = nGenes, group = 1)) +
   geom_line(color = "darkgrey") +
   geom_point(aes(size = neg_log_fdr), color = "blue") +
