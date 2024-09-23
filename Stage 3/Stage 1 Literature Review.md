@@ -1,4 +1,4 @@
-# **A Comparative Gene Expression & Functional Enrichment Analyses Between Male and Female Melanoma Samples** 
+# **Gender-Based Comparative Gene Expression and Functional Enrichment in Melanoma Samples** 
 
 Authors: Nour Nahtay (@NourNahtay), Merylin Ogunlola (@MerylinO), Igwebuike Oluchukwu Vivian (@igwebuikevee0000), Titilola Shittu (@lola), Princess Beatrice Sunday-Jimmy (@LaidyCharm), Onare Opeyemi Mary (@Onare)
 
