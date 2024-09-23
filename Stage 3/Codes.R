@@ -70,7 +70,7 @@ SKCMRaw <- assays(SKCM.Data)
 dim(SKCMRaw$unstranded)
 View(SKCMRaw$unstranded)
 
-#Downsize data to 20 primary and metastatic data + male and female
+#Downsize data to 20 primary and metastatic data from both male and female
 SelectedBarcodes <- c(subset(SKCMMETA, tumor_type == "Metastatic" & gender == "male")$Barcode[c(1:10)],
                       subset(SKCMMETA, tumor_type == "Primary" & gender == "male")$Barcode[c(1:10)],
                       subset(SKCMMETA, tumor_type == "Metastatic" & gender == "female")$Barcode[c(1:10)],
