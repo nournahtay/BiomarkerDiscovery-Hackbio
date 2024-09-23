@@ -24,10 +24,6 @@ library("EDASeq")
 install.packages('gplots')
 library("gplots")
 
-#Install sesameData, which provides preprocessed and annotation data to be used with the sesame package, which is designed for analyzing DNA methylation data, especially from Illumina methylation arrays (e.g., EPIC and 450K).
-BiocManager::install("sesameData")
-library("sesameData")
-
 # Install SummarizedExperiment, which provides a standardized data structure for storing and managing high-throughput genomic data
 BiocManager::install("SummarizedExperiment")
 library("SummarizedExperiment")
