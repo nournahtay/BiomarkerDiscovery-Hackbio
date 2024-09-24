@@ -4,7 +4,7 @@ Authors: Nour Nahtay (@NourNahtay), Merylin Ogunlola (@MerylinO), Igwebuike Oluc
 
 Melanoma is skin cancer that originates in the melanocytes or the melanin-producing skin cells. It occurs due to UV-induced DNA damage, leading to tumorigenesis and uncontrollable proliferation. (_Davis, Lauren E et al, 2019)_ The global melanoma burden is projected to escalate to 510,000 cases and 96,000 deaths annually by 2040, emphasizing the urgent need for continued research to combat this lethal disease_._ 
 
-#***Sex Differences and Outcomes in Melanoma Patients***
+***Sex Differences and Outcomes in Melanoma Patients***
 
 Studies show that males have less survival rates than females despite having more female cases, suggesting that the sex-based differences between both sexes play a major role in dictating survival.(_Arnold et al, 2022)_
 
