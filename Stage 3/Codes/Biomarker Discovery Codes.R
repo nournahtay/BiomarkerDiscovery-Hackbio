@@ -1,40 +1,10 @@
-#Install the latest version of BiocManager, which helps install bioconductor tools
-if (!requireNamespace("BiocManager", quietly = TRUE))
-  install.packages("BiocManager")
-
-#Install the latest version
-BiocManager::install(version = "3.18") # Install the latest version of Bioconductor
-library("BiocManager")
-
-#Install TCGAbiolinks, a package designed to access, analyze, and visualize data from The Cancer Genome Atlas (TCGA) project.
-BiocManager::install("TCGAbiolinks")
-library("TCGAbiolinks")
-
-#Install limma & edgeR commonly used for analyzing gene expression data, especially for RNA-seq and microarray data, to find differentially expressed genes (DEGs).
-BiocManager::install("limma")
-BiocManager::install("edgeR")
-library("limma")
-library("edgeR")
-
-#Install EDASeq for the preprocessing and normalization of RNA-seq data.
-BiocManager::install("EDASeq")
-library("EDASeq")
-
-#Install gplots for plotting graphs
-install.packages('gplots')
-library("gplots")
-
-# Install SummarizedExperiment, which provides a standardized data structure for storing and managing high-throughput genomic data
-BiocManager::install("SummarizedExperiment")
-library("SummarizedExperiment")
-
 #Get an Overview of the data on Melanoma
 getProjectSummary("TCGA-SKCM")
 
 #Check the other datasets available to work on
 ?GDCquery
 
-#Query the Data
+#Query the data and extract the needed category
 SKCM <- GDCquery(project = "TCGA-SKCM",
                  data.category = "Transcriptome Profiling",
                  data.type = "Gene Expression Quantification")
@@ -52,9 +22,8 @@ View(SKCM.Data)
 #Explore the data
 SKCM.Data$gender
 SKCM.Data$tumor_descriptor
-SKCM.Data$ #Insert anything after the dollar sign to check a subset you want, like race, gender, etc
-  
-#Check the Subsets of the metadata and add them in one data frame
+
+#Check the Subsets of the metadata and add them in one data frame (You have to drag your mouse over this one)
 SKCMMETA <- data.frame("gender" = SKCM.Data$gender,
                        "tumor_type" = SKCM.Data$tumor_descriptor,
                        "Barcode" = SKCM.Data$barcode)
@@ -62,7 +31,7 @@ SKCMMETA <- data.frame("gender" = SKCM.Data$gender,
 #Extract the raw data from the prepared dataset
 SKCMRaw <- assays(SKCM.Data)
 
-#Select unstranded data
+#View unstranded data
 dim(SKCMRaw$unstranded)
 View(SKCMRaw$unstranded)
 
@@ -71,25 +40,24 @@ SelectedBarcodes <- c(subset(SKCMMETA, tumor_type == "Metastatic" & gender == "m
                       subset(SKCMMETA, tumor_type == "Primary" & gender == "male")$Barcode[c(1:10)],
                       subset(SKCMMETA, tumor_type == "Metastatic" & gender == "female")$Barcode[c(1:10)],
                       subset(SKCMMETA, tumor_type == "Primary" & gender == "female")$Barcode[c(1:10)])
-
 SelectedData <- SKCMRaw$unstranded[, c(SelectedBarcodes)]
-dim(SelectedData)
-View(SelectedData) #To check for consistency in expression levels
 
-#Data normalization and filtering
+#View data
+dim(SelectedData)
+View(SelectedData)
+
+#Normalize data
 normalized <- TCGAanalyze_Normalization(tabDF = SelectedData, geneInfo = geneInfoHT, method = "geneLength")
 
-#Then filter
+#filter
 filtered <- TCGAanalyze_Filtering(tabDF = normalized,
                                   method = "quantile",
                                   qnt.cut = 0.25)
-
+#View Data
 View(filtered)
 dim(filtered)
 
-
 # Create matrices for pairwise comparison
-
 # For comparison between metastatic data
 mat1_MetaMale <- filtered[, subset(SKCMMETA, tumor_type == "Metastatic" & gender == "male")$Barcode[1:10]]
 mat2_MetaFemale <- filtered[, subset(SKCMMETA, tumor_type == "Metastatic" & gender == "female")$Barcode[1:10]]
@@ -103,7 +71,7 @@ results_metastatic <- TCGAanalyze_DEA(mat1 = mat1_MetaMale,
                                 fdr.cut = 0.01,
                                 logFC.cut = 2)
 
-# For comparison between primary
+# For comparison between primary data
 mat1_PrimMale <- filtered[, subset(SKCMMETA, tumor_type == "Primary" & gender == "male")$Barcode[1:10]]
 mat2_PrimFemale <- filtered[, subset(SKCMMETA, tumor_type == "Primary" & gender == "female")$Barcode[1:10]]
 
@@ -120,11 +88,11 @@ results_primary <- TCGAanalyze_DEA(mat1 = mat1_PrimMale,
 plot(results_metastatic$logFC, -log10(results_metastatic$FDR))
 plot(results_primary$logFC, -log10(results_primary$FDR))
 
-
 #DEA with treatment levels
 results_primary.level <- TCGAanalyze_LevelTab(results_primary,"male Primary","female Primary", mat1_PrimMale, mat2_PrimFemale)
 results_metastatic.level <- TCGAanalyze_LevelTab(results_metastatic,"male Metastatic","female Metastatic", mat1_MetaMale, mat2_MetaFemale)
 
+#View data
 head(results_metastatic.level)
 head(results_primary.level)
 
@@ -159,7 +127,6 @@ heatmap.2(x = as.matrix(heat.data.meta),
           na.color = 'black',
           ColSideColors = sample_colors)
 
-
 #Add a Legend
 legend("topright", legend = c("Male", "Female"),
        fill = c("royalblue4", "thistle2"),
@@ -187,29 +154,21 @@ legend("topright", legend = c("Male", "Female"),
 
 #Functional Enrichment Analysis
 
-#View volcano plot
-plot(results_metastatic$logFC, -log10(results_metastatic$FDR))
-plot(results_primary$logFC, -log10(results_primary$FDR))
-
-# Upregulated genes for male and female metastatic
+#Upregulated genes for male and female metastatic
 upreg_meta_male <- rownames(subset(results_metastatic.level, logFC > 2 & `male Metastatic` > 0))
 upreg_meta_female <- rownames(subset(results_metastatic.level, logFC > 2 & `female Metastatic` > 0))
 
-# Downregulated genes for male and female metastatic
+#Downregulated genes for male and female metastatic
 downreg_meta_male <- rownames(subset(results_metastatic.level, logFC < -2 & `male Metastatic` > 0))
 downreg_meta_female <- rownames(subset(results_metastatic.level, logFC < -2 & `female Metastatic` > 0))
 
-# Upregulated genes for male and female primary
+#Upregulated genes for male and female primary
 upreg_prim_male <- rownames(subset(results_primary.level, logFC > 2 & `male Primary` > 0))
 upreg_prim_female <- rownames(subset(results_primary.level, logFC > 2 & `female Primary` > 0))
 
-# Downregulated genes for male and female primary
+#Downregulated genes for male and female primary
 downreg_prim_male <- rownames(subset(results_primary.level, logFC < -2 & `male Primary` > 0))
 downreg_prim_female <- rownames(subset(results_primary.level, logFC < -2 & `female Primary` > 0))
-
-#Install and load bioMart, which converts 
-BiocManager::install("biomaRt")
-library("biomaRt")
 
 #Convert Ensemble ID to gene ID using biomart
 mart <- useMart(biomart = "ensembl", dataset = "hsapiens_gene_ensembl")
@@ -225,7 +184,7 @@ upreg_meta_female <- getBM(attributes = c('ensembl_gene_id','hgnc_symbol'),
                            values = upreg_meta_female,
                            mart = mart)$hgnc_symbol
 
-# Convert Ensemble IDs to gene symbols for male and female metastatic downregulated genes
+# Convert Ensembl IDs to gene symbols for male and female metastatic downregulated genes
 downreg_meta_male <- getBM(attributes = c('ensembl_gene_id','hgnc_symbol'),
                            filters = 'ensembl_gene_id',
                            values = downreg_meta_male,
