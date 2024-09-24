@@ -1,43 +1,35 @@
-# **The Gene Expression Interpretation & Downstream Functional Enrichment Analysis of Glioblastoma**
+# **Gender-Based Comparative Gene Expression and Functional Enrichment in Melanoma Samples**
  
 ## **Description**
-This project is centered around the analysis of a Glioblastoma gene expression dataset. The project is split into three parts:
-1. Interpretation of the gene expression dataset using RStudio
-2. Functional enrichment analysis on the upregulated genes
-3. Visualization of the functional enrichment analysis results using RStudio
+This project explores the role that sex plays in Melanoma. It is split into multiple parts
+1. Differential Expression Analysis
+2. Functional enrichment analysis
+3. k-NN Analysis
 
-Dataset:https://raw.githubusercontent.com/HackBio-Internship/public_datasets/main/Cancer2024/glioblastoma.csv
+Dataset:TCGA-SKCM
 
+*Biomarker Discovery*
 You will need the following packages in RStudio:
-1. gplots - Heatmap generation: 
-2. dplyr - Data manipulation
-3. ggplot2 - Functional enrichment analysis visualization
+![68747470733a2f2f6c68372d72742e676f6f676c6575736572636f6e74656e742e636f6d2f646f63737a2f41445f346e5866376371615537676b4363524e70654232643943662d583859664b6d646164324a5f78346733566d50325557666c75637830554b4434506774497](https://github.com/user-attachments/assets/ce2b1181-4157-4b3f-bec5-3c1f3dff3600)
 
 These packages can be installed using install.packages()
 
-The following functional enrichment analysis tools can be used for this analysis
-1. ShinyGO: http://bioinformatics.sdstate.edu/go/
-2. GOrilla: https://cbl-gorilla.cs.technion.ac.il/
-3. PANTHER: https://geneontology.org/
+### **Preprocessing**
+1. Dataset is uploaded directly onto RStudio using TCGABiolink, then preproccessed by:
+  1. Subsetting into the designated groups 
+     ![68747470733a2f2f6c68372d72742e676f6f676c6575736572636f6e74656e742e636f6d2f646f63737a2f41445f346e58633544567153466e654d674f72584f587138415f6e4a52466c5152487765584b37546c484b4e514c3972727272574535796c4c5f3138304c67566](https://github.com/user-attachments/assets/f8abf333-3a15-4d50-b310-f8c9c9ae9e9b)
+  2. Normalization
+  3. Filteration with a quantile cut off 0.25 
 
-### **Gene Expression Interpretation**
-1. The URL is to be pasted directly onto RStudio, then read using read.csv
-     - You can customize the rows and columns to be included using row.names() or col.names()
-2. Heatmaps are generated using heatmap.2() from gplots. Please note that the dataset is directly converted to the matrix form using as.matrix() 
-     - The heatmap is completely customizable, from removing dendrograms, to alternating the scale, to the color palette used and more.
-     - For other color palette options, use https://colorspace.r-forge.r-project.org/articles/hcl_palettes.html
-     - If you recieve an error related to the margains, simply make the plot display larger with your pointer.
-     - If you face any issues with the graphic display, use dev.off()
+### **Differential Expressionn Analysis**
+1. Metastatic and primary data is grouped together
+2. Treatment level DEA is performed
+3. Ouput is used as data to generate heatmaps comparing the clustering of males vs females in both tumor types
 
 ### **Functional Enrichment Analysis**
-1. The data is separated into two groups according to column names, due to their similarity
-2. To subset the groups into upregulated and downregulated genes:
-     - calculate the fold changes using means. There are many possible formulas for this, but the log2 formula was used to accurately display the difference between the over and under expressed genes on our set
-     - calculate the p-value using the t.test forumla
-     - subset the genes according to the p-value and fold change of choice.
-4. Visualize the fold change and negative log of p-values to observe the split
-5. Extract the geneIDs into a txt file and paste the list into the functional enrichment site of choice. In this project, we've used PANTHER as the main site, and ShinyGO for conformation. We've configured the tool to provide us with pathways under the GOdatabase with a FDR cutoff of 0.05.
-        - We've only used the upregulated genes for this project. The steps are applicable for both datas separately or together
+1. The up and downregulated genes for all 4 subsets are extracted individually
+2. The data undergoes functional enrichment analysis (particularly gene ontology), selecting the top 5 pathways.
+3. Results a
 
 ### **Functional Enrichment Analysis Visualization**
 1. Group the pathway name, the number of genes, and the negative log10 of the FDR generated from the website
