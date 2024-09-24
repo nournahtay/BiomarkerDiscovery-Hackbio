@@ -1,6 +1,6 @@
 # **Gender-Based Comparative Gene Expression and Functional Enrichment in Melanoma Samples** 
 
-Authors: Nour Nahtay (@NourNahtay), Merylin Ogunlola (@MerylinO), Igwebuike Oluchukwu Vivian (@igwebuikevee0000), Titilola Shittu (@lola), Princess Beatrice Sunday-Jimmy (@LaidyCharm), Onare Opeyemi Mary (@Onare)
+Authors: Nour Nahtay (@NourNahtay), Igwebuike Oluchukwu Vivian (@igwebuikevee0000), Rutuja Pangare (@rutuja0502), Merylin Ogunlola (@MerylinO), Onare Opeyemi Mary (@Onare),  Titilola Shittu (@lola), Princess Beatrice Sunday-Jimmy (@LaidyCharm)
 
 Melanoma is skin cancer that originates in the melanocytes or the melanin-producing skin cells. It occurs due to UV-induced DNA damage, leading to tumorigenesis and uncontrollable proliferation. (_Davis, Lauren E et al, 2019)_ The global melanoma burden is projected to escalate to 510,000 cases and 96,000 deaths annually by 2040, emphasizing the urgent need for continued research to combat this lethal disease_._ 
 
@@ -52,7 +52,7 @@ Classification took place using k-NN analysis, using the class package and the 8
 
 The model classified only 25% of the sample, indicating low prediction rates with the P-Value of 0.9648 showing that is not significantly better than random guessing, making it unreliable. The model predicted 75% of samples to be metastatic, indicating bias and inability to predict non-metastatic samples. _(Gupta et. al, 2022)_
 
-**Conclusion and future direction**
+***Conclusion and Future Direction***
 
 The bias towards metastatic samples shows the need for feature tuning. Accuracy could be increased by investigating different techniques, such as random forests.
 
