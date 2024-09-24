@@ -9,6 +9,7 @@ This project explores the role that sex plays in Melanoma. It is split into mult
 Dataset:TCGA-SKCM
 
 *Biomarker Discovery*
+
 You will need the following packages in RStudio:
 ![68747470733a2f2f6c68372d72742e676f6f676c6575736572636f6e74656e742e636f6d2f646f63737a2f41445f346e5866376371615537676b4363524e70654232643943662d583859664b6d646164324a5f78346733566d50325557666c75637830554b4434506774497](https://github.com/user-attachments/assets/ce2b1181-4157-4b3f-bec5-3c1f3dff3600)
 
@@ -29,14 +30,9 @@ These packages can be installed using install.packages()
 ### **Functional Enrichment Analysis**
 1. The up and downregulated genes for all 4 subsets are extracted individually
 2. The data undergoes functional enrichment analysis (particularly gene ontology), selecting the top 5 pathways.
-3. Results a
+3. Results are visualized in a barplot form and the PDF is saved on the computed
 
-### **Functional Enrichment Analysis Visualization**
-1. Group the pathway name, the number of genes, and the negative log10 of the FDR generated from the website
-2. Generate a simple plot using ggplot2. The plot can be customizable. Some of the simple plots can be:
-     - Lollipop plot
-     - Line plot
-     - Bubble plot
-     - Dot plot
+*Biomarker Discovery*
+After the data has been preprocessed, k-NN analysis was performed on the 'TCGA_SKCM' dataset to classify melanoma samples by tumor type. The code was implemented by using the class package in R.  80/20 train-test split was applied after normalizing and filtering the data. The k-NN algorithm was executed with varying values of (k) (from 1 to the number of training samples) to optimize accuracy.  A confusion matrix was used for a thorough evaluation of a classification model, allowing for better error understanding and performance metrics calculation.
 
 Happy Analyzing!
