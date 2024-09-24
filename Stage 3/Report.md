@@ -1,14 +1,14 @@
-# *Gender-Based Comparative Gene Expression and Functional Enrichment in Melanoma Samples** 
+# **Gender-Based Comparative Gene Expression and Functional Enrichment in Melanoma Samples** 
 
 Authors: Nour Nahtay (@NourNahtay), Merylin Ogunlola (@MerylinO), Igwebuike Oluchukwu Vivian (@igwebuikevee0000), Titilola Shittu (@lola), Princess Beatrice Sunday-Jimmy (@LaidyCharm), Onare Opeyemi Mary (@Onare)
 
 Melanoma is skin cancer that originates in the melanocytes or the melanin-producing skin cells. It occurs due to UV-induced DNA damage, leading to tumorigenesis and uncontrollable proliferation. (_Davis, Lauren E et al, 2019)_ The global melanoma burden is projected to escalate to 510,000 cases and 96,000 deaths annually by 2040, emphasizing the urgent need for continued research to combat this lethal disease_._ 
 
-**Sex Differences and Outcomes in Melanoma Patients**
+#***Sex Differences and Outcomes in Melanoma Patients***
 
 Studies show that males have less survival rates than females despite having more female cases, suggesting that the sex-based differences between both sexes play a major role in dictating survival.(_Arnold et al, 2022)_
 
-**Analysis Pipeline**
+#***Analysis Pipeline***
 
 ****![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXc0YzHDArNngwGWgrK_Yh-fWEVTeWR966UZIhEJykfk8tXauX5FItCe7nEUxTJ5vjrU6osSc2qkhEaqtgmERiNYd25-ebvBpJX8GkMi0CMOkgKSMAplKlQhiwMeUUX8xLzjFLgT7i1AcXWa7vh2PgsLCOsI?key=GNpt1ZRV2jJ52mDok30oRw)****
 
@@ -16,7 +16,7 @@ Figure 1: An Overview of the Pipeline Used for the Biomarker Discovery Portion o
 
 Created in BioRender.com
 
-**Preprocessing Data**
+#***Preprocessing Data***
 
 The transcriptome profiles from the TCGA-SKCM project were loaded, subsetted, normalized, then filtered with a quantile cut of 0.25 to eliminate background noise.
 
@@ -30,7 +30,7 @@ Figure 2: The 4 Subsets Used for the Analysis (n=40)
 \
 
 
-**1. Biomarker Discovery Pipeline**
+***1. Biomarker Discovery Pipeline***
 
 ****![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXf7cqaU7gkCcRNpeB2d9Cf-X8YfKmdad2J_x4g3VmP2UWflucx0UKD4PgtIy6J3HViQTaWS2hK6184d2OudvF231aoYXuttr0YorN91y4RSH0JZjVYuoEHvI36vqumMRTcgLQoIQE9Zxjbhe0XnVAWvh80?key=GNpt1ZRV2jJ52mDok30oRw)****
 
@@ -38,23 +38,23 @@ Figure 3: An Overview of the Packages Used for Biomarker Discovery Pipeline
 
 Created in BioRender.com
 
-1. **_Differential Expression Analysis (DEA)_**
+1. ***_Differential Expression Analysis (DEA)_***
 
 The data is split into 2 tumor-based groups to compare the DEGs in both sexes. DEA was performed with a FDR cutoff of <0.01 and a logFC of 2 for accuracy. The output was then used for comparison using heatmaps.
 
-2. **_Functional Enrichment Analysis (Gene Ontology)_**
+2. ***_Functional Enrichment Analysis (Gene Ontology)_***
 
 The up and downregulated genes for the 4 groups were isolated with a logFC cut off of 2 (up) and -2 (down), then prepped for gene ontology. The top 5 pathways were then visualized for comparison.
 
-**Result Interpretation for Biomarker Discovery Findings**
+***Result Interpretation for Biomarker Discovery Findings***
 
 DEA revealed 1,016 DEGs in primary samples and 1,014 DEGs in the metastatic samples with distinct clustering between both sexes in both tumor types, highlighting gender-specific differences. Despite having overall differing pathways, the top 5 functional enrichment results were the same for both sexes in both tumor types.
 
-**2. Machine Learning** 
+***2. Machine Learning*** 
 
 Classification took place using k-NN analysis, using the class package and the 80/20 train-test split. The k-NN algorithm was executed with k values from 1 to sample size and a confusion matrix was used for a thorough evaluation of a classification model.
 
-**Results and interpretation**
+***Results and Interpretation***
 
 The model classified only 25% of the sample, indicating low prediction rates with the P-Value of 0.9648 showing that is not significantly better than random guessing, making it unreliable. The model predicted 75% of samples to be metastatic, indicating bias and inability to predict non-metastatic samples. _(Gupta et. al, 2022)_
 
@@ -66,7 +66,7 @@ Analyses provided insights into gene expression patterns, confirming sex-based d
 
 Overall, increasing sample size and including various demographics can provide valuable insights and improved accuracy of analyses
 
-**Citations:**
+***Citations:***
 
 1. _Davis, Lauren E et al. “Current state of melanoma diagnosis and treatment.” Cancer biology & therapy vol. 20,11 (2019): 1366-1379. doi:10.1080/15384047.2019.1640032_
 
