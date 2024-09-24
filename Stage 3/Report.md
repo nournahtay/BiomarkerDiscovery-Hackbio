@@ -20,15 +20,9 @@ Created in BioRender.com
 
 The transcriptome profiles from the TCGA-SKCM project were loaded, subsetted, normalized, then filtered with a quantile cut of 0.25 to eliminate background noise.
 
-\
-
-
 ![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXc5DVqSFneMgOrXOXq8A_nJRFlQRHweXK7TlHKNQL9rrrrWE5ylL_180LgVcI3PQb9tRbICWypPe9ouxBBY0aCqsn4Z4fBNQp_Ri2ZH_fuNP236PEz5_VZ3eIcx3S-BMf9iXashIeJY6xARFka7pO7wKlnx?key=GNpt1ZRV2jJ52mDok30oRw)
 
 Figure 2: The 4 Subsets Used for the Analysis (n=40)
-
-\
-
 
 ***1. Biomarker Discovery Pipeline***
 
