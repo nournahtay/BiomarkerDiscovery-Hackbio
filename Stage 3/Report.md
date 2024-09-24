@@ -2,7 +2,7 @@
 
 Authors: Nour Nahtay (@NourNahtay), Igwebuike Oluchukwu Vivian (@igwebuikevee0000), Rutuja Pangare (@rutuja0502), Merylin Ogunlola (@MerylinO), Onare Opeyemi Mary (@Onare),  Titilola Shittu (@lola), Princess Beatrice Sunday-Jimmy (@LaidyCharm)
 
-Melanoma is skin cancer that originates in the melanocytes or the melanin-producing skin cells. It occurs due to UV-induced DNA damage, leading to tumorigenesis and uncontrollable proliferation. (_Davis, Lauren E et al, 2019)_ The global melanoma burden is projected to escalate to 510,000 cases and 96,000 deaths annually by 2040, emphasizing the urgent need for continued research to combat this lethal disease_._ 
+Melanoma is skin cancer that originates in the melanocytes or the melanin-producing skin cells. It occurs due to UV-induced DNA damage, leading to tumorigenesis and uncontrollable proliferation. (_Davis, Lauren E et al, 2019)_ The global melanoma burden is projected to escalate to 510,000 cases and 96,000 deaths annually by 2040, emphasizing the urgent need for continued research to combat this lethal disease.
 
 ***Sex Differences and Outcomes in Melanoma Patients***
 
@@ -13,8 +13,6 @@ Studies show that males have less survival rates than females despite having mor
 ****![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXc0YzHDArNngwGWgrK_Yh-fWEVTeWR966UZIhEJykfk8tXauX5FItCe7nEUxTJ5vjrU6osSc2qkhEaqtgmERiNYd25-ebvBpJX8GkMi0CMOkgKSMAplKlQhiwMeUUX8xLzjFLgT7i1AcXWa7vh2PgsLCOsI?key=GNpt1ZRV2jJ52mDok30oRw)****
 
 Figure 1: An Overview of the Pipeline Used for the Biomarker Discovery Portion of the Analysis 
-
-Created in BioRender.com
 
 ***Preprocessing Data***
 
@@ -29,8 +27,6 @@ Figure 2: The 4 Subsets Used for the Analysis (n=40)
 ****![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXf7cqaU7gkCcRNpeB2d9Cf-X8YfKmdad2J_x4g3VmP2UWflucx0UKD4PgtIy6J3HViQTaWS2hK6184d2OudvF231aoYXuttr0YorN91y4RSH0JZjVYuoEHvI36vqumMRTcgLQoIQE9Zxjbhe0XnVAWvh80?key=GNpt1ZRV2jJ52mDok30oRw)****
 
 Figure 3: An Overview of the Packages Used for Biomarker Discovery Pipeline
-
-Created in BioRender.com
 
 1. ***_Differential Expression Analysis (DEA)_***
 
