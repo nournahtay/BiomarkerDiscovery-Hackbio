@@ -16,7 +16,7 @@ Figure 1: An Overview of the Pipeline Used for the Biomarker Discovery Portion o
 
 Created in BioRender.com
 
-#***Preprocessing Data***
+***Preprocessing Data***
 
 The transcriptome profiles from the TCGA-SKCM project were loaded, subsetted, normalized, then filtered with a quantile cut of 0.25 to eliminate background noise.
 
