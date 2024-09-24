@@ -24,6 +24,7 @@ SKCMMETA <- data.frame("gender" = SKCM.Data$gender,
 
 #Extract the raw data from the prepared dataset
 SKCMRaw <- assays(SKCM.Data)
+
 #Select unstranded data
 dim(SKCMRaw$unstranded)
 View(SKCMRaw$unstranded)
@@ -38,7 +39,7 @@ SelectedData <- SKCMRaw$unstranded[, c(SelectedBarcodes)]
 dim(SelectedData)
 View(SelectedData) #To check for consistency in expression levels
 
-#Data normalization and filtering
+#Normalize
 normalized <- TCGAanalyze_Normalization(tabDF = SelectedData, geneInfo = geneInfoHT, method = "geneLength")
 
 #Then filter
@@ -48,6 +49,7 @@ filtered <- TCGAanalyze_Filtering(tabDF = normalized,
 
 View(filtered)
 dim(filtered)
+
 # Create labels for classification (tumor_type)
 labels <- SKCMMETA[SKCMMETA$Barcode %in% colnames(filtered), "tumor_type"]
 
@@ -56,9 +58,6 @@ labels <- factor(labels)
 
 # View the first few labels to confirm
 head(labels)
-# Install and load the caret package
-if (!requireNamespace("caret", quietly = TRUE)) install.packages("caret")
-library(caret)
 
 # Split the data (80% for training, 20% for testing)
 set.seed(123) # For reproducibility
@@ -71,6 +70,7 @@ test_data <- filtered[, -trainIndex]
 # Training and testing labels
 train_labels <- labels[trainIndex]
 test_labels <- labels[-trainIndex]
+
 # Install the class package if necessary
 if (!requireNamespace("class", quietly = TRUE)) install.packages("class")
 library(class)
