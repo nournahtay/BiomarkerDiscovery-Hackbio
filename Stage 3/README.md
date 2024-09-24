@@ -33,6 +33,11 @@ These packages can be installed using install.packages()
 3. Results are visualized in a barplot form and the PDF is saved on the computed
 
 *Biomarker Discovery*
-After the data has been preprocessed, k-NN analysis was performed on the 'TCGA_SKCM' dataset to classify melanoma samples by tumor type. The code was implemented by using the class package in R.  80/20 train-test split was applied after normalizing and filtering the data. The k-NN algorithm was executed with varying values of (k) (from 1 to the number of training samples) to optimize accuracy.  A confusion matrix was used for a thorough evaluation of a classification model, allowing for better error understanding and performance metrics calculation.
+1. Perform k-NN analysis  to classify melanoma samples
+     - The code was implemented by using the class package in R.
+     - 80/20 train-test split is employed.
+     - The k-NN algorithm execution with varying values of (k) (from 1 to the number of training samples) to optimize accuracy.
+2. A confusion matrix is generated 
+3. An analysis vs K plot are generated
 
 Happy Analyzing!
