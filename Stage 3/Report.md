@@ -8,7 +8,7 @@ Melanoma is skin cancer that originates in the melanocytes or the melanin-produc
 
 Studies show that males have less survival rates than females despite having more female cases, suggesting that the sex-based differences between both sexes play a major role in dictating survival.(_Arnold et al, 2022)_
 
-#***Analysis Pipeline***
+***Analysis Pipeline***
 
 ****![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXc0YzHDArNngwGWgrK_Yh-fWEVTeWR966UZIhEJykfk8tXauX5FItCe7nEUxTJ5vjrU6osSc2qkhEaqtgmERiNYd25-ebvBpJX8GkMi0CMOkgKSMAplKlQhiwMeUUX8xLzjFLgT7i1AcXWa7vh2PgsLCOsI?key=GNpt1ZRV2jJ52mDok30oRw)****
 
