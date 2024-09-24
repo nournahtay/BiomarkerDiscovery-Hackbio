@@ -6,7 +6,7 @@ Melanoma is skin cancer that originates in the melanocytes or the melanin-produc
 
 ***Sex Differences and Outcomes in Melanoma Patients***
 
-Studies show that males have less survival rates than females despite having more female cases, suggesting that the sex-based differences between both sexes play a major role in dictating survival.(_Arnold et al, 2022)_
+Studies show that males have less survival rates than females despite having more female cases, suggesting that the sex-based differences between both sexes play a major role in dictating survival. (_Arnold et al, 2022)_
 
 ***Analysis Pipeline***
 
