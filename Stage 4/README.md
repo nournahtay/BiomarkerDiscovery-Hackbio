@@ -1,7 +1,7 @@
 # **IDH Status-Based Comparative Gene Expression and Functional Enrichment in Diffuse Glioma Samples**
  
 ## **Description**
-This project explores the role that sex plays in Melanoma. It is split into multiple parts
+This project explores the role that IDH mutation plays in Glioma. It is split into multiple parts
 1. Differential Expression Analysis
 2. Functional enrichment analysis
 3. k-NN Analysis
