@@ -115,11 +115,7 @@ Figure 15: rf model
 
 **Conclusion**
 
-In summary, IDH-wildtype gliomas exhibit down regulated pathways linked to invasion and
-
-metastasis, reflecting their poor prognosis, while mutant gliomas show downregulation
-
-of proliferative pathways and upregulation of immune-related processes, consistent with slower growth and better clinical outcomes.
+In summary, IDH-wildtype gliomas exhibit down regulated pathways linked to invasion and metastasis, reflecting their poor prognosis, while mutant gliomas show downregulation of proliferative pathways and upregulation of immune-related processes, consistent with slower growth and better clinical outcomes.
 
 **Citations:**
 
