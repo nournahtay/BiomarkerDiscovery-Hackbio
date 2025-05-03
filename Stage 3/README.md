@@ -6,7 +6,7 @@ This project explores the role that sex plays in Melanoma. It is split into mult
 2. Gene Function Analysis
 3. k-NN Analysis
 
-Dataset:TCGA-SKCM
+Dataset: TCGA-SKCM
 
 *Biomarker Discovery*
 
