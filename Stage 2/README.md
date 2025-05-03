@@ -1,10 +1,10 @@
-# **The Gene Expression Interpretation & Downstream Functional Enrichment Analysis of Glioblastoma**
+# **Uncovering Biomarkers of Glioblastoma using RNASeq Analysis**
  
 ## **Description**
-This project is centered around the analysis of a Glioblastoma gene expression dataset. The project is split into three parts:
-1. Interpretation of the gene expression dataset using RStudio
-2. Functional enrichment analysis on the upregulated genes
-3. Visualization of the functional enrichment analysis results using RStudio
+This project is centered around the analysis of a Glioblastoma transcriptome dataset to gain insight on the differentially expressed genes. The project is split into three parts:
+1. Differential Expression Analysis
+2. Gene Function Analysis
+3. Visualization of GFA results using RStudio
 
 Dataset:https://raw.githubusercontent.com/HackBio-Internship/public_datasets/main/Cancer2024/glioblastoma.csv
 
@@ -29,7 +29,7 @@ The following functional enrichment analysis tools can be used for this analysis
      - If you recieve an error related to the margains, simply make the plot display larger with your pointer.
      - If you face any issues with the graphic display, use dev.off()
 
-### **Functional Enrichment Analysis**
+### **Function Analysis**
 1. The data is separated into two groups according to column names, due to their similarity
 2. To subset the groups into upregulated and downregulated genes:
      - calculate the fold changes using means. There are many possible formulas for this, but the log2 formula was used to accurately display the difference between the over and under expressed genes on our set
@@ -39,7 +39,7 @@ The following functional enrichment analysis tools can be used for this analysis
 5. Extract the geneIDs into a txt file and paste the list into the functional enrichment site of choice. In this project, we've used PANTHER as the main site, and ShinyGO for conformation. We've configured the tool to provide us with pathways under the GOdatabase with a FDR cutoff of 0.05.
         - We've only used the upregulated genes for this project. The steps are applicable for both datas separately or together
 
-### **Functional Enrichment Analysis Visualization**
+### **FunctionAnalysis Visualization**
 1. Group the pathway name, the number of genes, and the negative log10 of the FDR generated from the website
 2. Generate a simple plot using ggplot2. The plot can be customizable. Some of the simple plots can be:
      - Lollipop plot
