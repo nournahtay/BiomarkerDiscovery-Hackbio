@@ -3,7 +3,7 @@
 ## **Description**
 This project is centered around the analysis of a Glioblastoma transcriptome dataset to gain insight on the differentially expressed genes. The project is split into three parts:
 1. Gene Expression Analysis
-2. Gene Function Analysis
+2. Functional Enrichment Analysis
 3. Visualization of GFA results using RStudio
 
 Dataset:https://raw.githubusercontent.com/HackBio-Internship/public_datasets/main/Cancer2024/glioblastoma.csv
@@ -15,7 +15,7 @@ You will need the following packages in RStudio:
 
 These packages can be installed using install.packages()
 
-The following function analysis tools can be used for this analysis
+The following Functional Enrichment Analysis tools can be used for this analysis
 1. ShinyGO: http://bioinformatics.sdstate.edu/go/
 2. GOrilla: https://cbl-gorilla.cs.technion.ac.il/
 3. PANTHER: https://geneontology.org/
