@@ -1,4 +1,4 @@
-# **Gender-Based Comparative Gene Expression and Functional Enrichment in Melanoma Samples**
+# **Gender-Based Comparative Gene Expression and Functional Analysis on Melanoma Samples**
  
 ## **Description**
 This project explores the role that sex plays in Melanoma. It is split into multiple parts
