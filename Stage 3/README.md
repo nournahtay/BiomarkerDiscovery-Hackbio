@@ -23,7 +23,7 @@ These packages can be installed using install.packages()
   3. Filteration with a quantile cut off = 0.25 
 
 ### **Differential Expression Analysis**
-1. Metastatic and primary data is grouped together
+1. Data was grouped together according to tumor type
 2. Treatment level DEA is performed with logfc = 2 and FDR cut = 0.1
 3. Output is used as data to generate heatmaps comparing the clustering of males vs females in both tumor types
 
