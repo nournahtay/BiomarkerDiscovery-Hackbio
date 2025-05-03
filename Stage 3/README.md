@@ -22,10 +22,10 @@ These packages can be installed using install.packages()
   2. Normalization
   3. Filteration with a quantile cut off 0.25 
 
-### **Differential Expressionn Analysis**
+### **Differential Expression Analysis**
 1. Metastatic and primary data is grouped together
 2. Treatment level DEA is performed with logfc = 2 and FDR cut = 0.1
-3. Ouput is used as data to generate heatmaps comparing the clustering of males vs females in both tumor types
+3. Output is used as data to generate heatmaps comparing the clustering of males vs females in both tumor types
 
 ### **Gene Function Analysis**
 1. The up and downregulated genes for all 4 subsets are extracted individually
