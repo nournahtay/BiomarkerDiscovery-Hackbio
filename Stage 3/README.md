@@ -14,6 +14,7 @@ You will need the following packages in RStudio:
 1. TCGABiolinks
 2. SummarizedExperiments
 3. gplots
+4. biomart
 
 These packages can be installed using install.packages()
 
