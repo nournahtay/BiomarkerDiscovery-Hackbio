@@ -2,7 +2,7 @@
  
 ## **Description**
 This project is centered around the analysis of a Glioblastoma transcriptome dataset to gain insight on the differentially expressed genes. The project is split into three parts:
-1. Differential Expression Analysis
+1. Gene Expression Analysis
 2. Gene Function Analysis
 3. Visualization of GFA results using RStudio
 
@@ -20,7 +20,7 @@ The following functional enrichment analysis tools can be used for this analysis
 2. GOrilla: https://cbl-gorilla.cs.technion.ac.il/
 3. PANTHER: https://geneontology.org/
 
-### **Gene Expression Interpretation**
+### **Gene Expression Analysis**
 1. The URL is to be pasted directly onto RStudio, then read using read.csv
      - You can customize the rows and columns to be included using row.names() or col.names()
 2. Heatmaps are generated using heatmap.2() from gplots. Please note that the dataset is directly converted to the matrix form using as.matrix() 
@@ -39,7 +39,7 @@ The following functional enrichment analysis tools can be used for this analysis
 5. Extract the geneIDs into a txt file and paste the list into the functional enrichment site of choice. In this project, we've used PANTHER as the main site, and ShinyGO for conformation. We've configured the tool to provide us with pathways under the GOdatabase with a FDR cutoff of 0.05.
         - We've only used the upregulated genes for this project. The steps are applicable for both datas separately or together
 
-### **FunctionAnalysis Visualization**
+### **Function Analysis Visualization**
 1. Group the pathway name, the number of genes, and the negative log10 of the FDR generated from the website
 2. Generate a simple plot using ggplot2. The plot can be customizable. Some of the simple plots can be:
      - Lollipop plot
