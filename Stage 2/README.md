@@ -1,4 +1,4 @@
-# **Uncovering Biomarkers of Glioblastoma using RNASeq Analysis**
+# **RNASeq Analysis of Glioblastoma**
  
 ## **Description**
 This project is centered around the analysis of a Glioblastoma transcriptome dataset to gain insight on the differentially expressed genes. The project is split into three parts:
@@ -11,11 +11,11 @@ Dataset:https://raw.githubusercontent.com/HackBio-Internship/public_datasets/mai
 You will need the following packages in RStudio:
 1. gplots - Heatmap generation: 
 2. dplyr - Data manipulation
-3. ggplot2 - Functional enrichment analysis visualization
+3. ggplot2 - Gene expression analysis visualization
 
 These packages can be installed using install.packages()
 
-The following functional enrichment analysis tools can be used for this analysis
+The following function analysis tools can be used for this analysis
 1. ShinyGO: http://bioinformatics.sdstate.edu/go/
 2. GOrilla: https://cbl-gorilla.cs.technion.ac.il/
 3. PANTHER: https://geneontology.org/
@@ -36,7 +36,7 @@ The following functional enrichment analysis tools can be used for this analysis
      - calculate the p-value using the t.test forumla
      - subset the genes according to the p-value and fold change of choice.
 4. Visualize the fold change and negative log of p-values to observe the split
-5. Extract the geneIDs into a txt file and paste the list into the functional enrichment site of choice. In this project, we've used PANTHER as the main site, and ShinyGO for conformation. We've configured the tool to provide us with pathways under the GOdatabase with a FDR cutoff of 0.05.
+5. Extract the geneIDs into a txt file and paste the list into the function analysis site of choice. In this project, we've used PANTHER as the main site, and ShinyGO for conformation. We've configured the tool to provide us with pathways under the GOdatabase with a FDR cutoff of 0.05.
         - We've only used the upregulated genes for this project. The steps are applicable for both datas separately or together
 
 ### **Function Analysis Visualization**
