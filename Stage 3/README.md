@@ -20,7 +20,7 @@ These packages can be installed using install.packages()
   1. Subsetting into the designated groups 
      ![68747470733a2f2f6c68372d72742e676f6f676c6575736572636f6e74656e742e636f6d2f646f63737a2f41445f346e58633544567153466e654d674f72584f587138415f6e4a52466c5152487765584b37546c484b4e514c3972727272574535796c4c5f3138304c67566](https://github.com/user-attachments/assets/f8abf333-3a15-4d50-b310-f8c9c9ae9e9b)
   2. Normalization
-  3. Filteration with a quantile cut off 0.25 
+  3. Filteration with a quantile cut off = 0.25 
 
 ### **Differential Expression Analysis**
 1. Metastatic and primary data is grouped together
