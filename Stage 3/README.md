@@ -3,7 +3,7 @@
 ## **Description**
 This project explores the role that sex plays in Melanoma. It is split into multiple parts
 1. Differential Expression Analysis
-2. Functional enrichment analysis
+2. Gene Function Analysis
 3. k-NN Analysis
 
 Dataset:TCGA-SKCM
@@ -24,15 +24,15 @@ These packages can be installed using install.packages()
 
 ### **Differential Expressionn Analysis**
 1. Metastatic and primary data is grouped together
-2. Treatment level DEA is performed
+2. Treatment level DEA is performed with logfc = 2 and FDR cut = 0.1
 3. Ouput is used as data to generate heatmaps comparing the clustering of males vs females in both tumor types
 
-### **Functional Enrichment Analysis**
+### **Gene Function Analysis**
 1. The up and downregulated genes for all 4 subsets are extracted individually
-2. The data undergoes functional enrichment analysis (particularly gene ontology), selecting the top 5 pathways.
-3. Results are visualized in a barplot form and the PDF is saved on the computed
+2. The data undergoes functional analysis (particularly gene ontology), selecting the top 5 pathways.
+3. Results are visualized in a barplot form and the PDF is saved on the computer
 
-*Biomarker Discovery*
+*Machine Learning*
 1. Perform k-NN analysis  to classify melanoma samples
      - The code was implemented by using the class package in R.
      - 80/20 train-test split is employed.
