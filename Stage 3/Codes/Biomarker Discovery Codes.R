@@ -155,173 +155,82 @@ legend("topright", legend = c("Male", "Female"),
 #Functional Enrichment Analysis
 
 #Upregulated genes for male and female metastatic
-upreg_meta_male <- rownames(subset(results_metastatic.level, logFC > 2 & `male Metastatic` > 0))
-upreg_meta_female <- rownames(subset(results_metastatic.level, logFC > 2 & `female Metastatic` > 0))
-
-#Downregulated genes for male and female metastatic
-downreg_meta_male <- rownames(subset(results_metastatic.level, logFC < -2 & `male Metastatic` > 0))
-downreg_meta_female <- rownames(subset(results_metastatic.level, logFC < -2 & `female Metastatic` > 0))
-
-#Upregulated genes for male and female primary
-upreg_prim_male <- rownames(subset(results_primary.level, logFC > 2 & `male Primary` > 0))
-upreg_prim_female <- rownames(subset(results_primary.level, logFC > 2 & `female Primary` > 0))
-
-#Downregulated genes for male and female primary
-downreg_prim_male <- rownames(subset(results_primary.level, logFC < -2 & `male Primary` > 0))
-downreg_prim_female <- rownames(subset(results_primary.level, logFC < -2 & `female Primary` > 0))
+upreg_meta <- rownames(subset(results_metastatic.level, logFC > 2))
+downreg_meta <- rownames(subset(results_metastatic.level, logFC < -2))
+upreg_prim_male <- rownames(subset(results_primary.level, logFC > 2))
+downreg_prim_male <- rownames(subset(results_primary.level, logFC < -2))
 
 #Convert Ensemble ID to gene ID using biomart
 mart <- useMart(biomart = "ensembl", dataset = "hsapiens_gene_ensembl")
 
 # Convert Ensemble IDs to gene symbols for male and female metastatic upregulated genes
-upreg_meta_male <- getBM(attributes = c('ensembl_gene_id','hgnc_symbol'),
+upreg_meta <- getBM(attributes = c('ensembl_gene_id','hgnc_symbol'),
                          filters = 'ensembl_gene_id',
-                         values = upreg_meta_male,
+                         values = upreg_meta,
                          mart = mart)$hgnc_symbol
 
-upreg_meta_female <- getBM(attributes = c('ensembl_gene_id','hgnc_symbol'),
+downreg_meta <- getBM(attributes = c('ensembl_gene_id','hgnc_symbol'),
                            filters = 'ensembl_gene_id',
-                           values = upreg_meta_female,
+                           values = downreg_meta,
                            mart = mart)$hgnc_symbol
 
-# Convert Ensembl IDs to gene symbols for male and female metastatic downregulated genes
-downreg_meta_male <- getBM(attributes = c('ensembl_gene_id','hgnc_symbol'),
-                           filters = 'ensembl_gene_id',
-                           values = downreg_meta_male,
-                           mart = mart)$hgnc_symbol
-
-downreg_meta_female <- getBM(attributes = c('ensembl_gene_id','hgnc_symbol'),
-                             filters = 'ensembl_gene_id',
-                             values = downreg_meta_female,
-                             mart = mart)$hgnc_symbol
-
-# Convert Ensemble IDs to gene symbols for male and female primary upregulated genes
-upreg_prim_male <- getBM(attributes = c('ensembl_gene_id','hgnc_symbol'),
+upreg_prim <- getBM(attributes = c('ensembl_gene_id','hgnc_symbol'),
                          filters = 'ensembl_gene_id',
-                         values = upreg_prim_male,
+                         values = upreg_prim,
                          mart = mart)$hgnc_symbol
 
-upreg_prim_female <- getBM(attributes = c('ensembl_gene_id','hgnc_symbol'),
+downreg_prim <- getBM(attributes = c('ensembl_gene_id','hgnc_symbol'),
                            filters = 'ensembl_gene_id',
-                           values = upreg_prim_female,
+                           values = downreg_prim,
                            mart = mart)$hgnc_symbol
-
-# Convert Ensemble IDs to gene symbols for male and female primary downregulated genes
-downreg_prim_male <- getBM(attributes = c('ensembl_gene_id','hgnc_symbol'),
-                           filters = 'ensembl_gene_id',
-                           values = downreg_prim_male,
-                           mart = mart)$hgnc_symbol
-
-downreg_prim_female <- getBM(attributes = c('ensembl_gene_id','hgnc_symbol'),
-                             filters = 'ensembl_gene_id',
-                             values = downreg_prim_female,
-                             mart = mart)$hgnc_symbol
 
 # Functional Enrichment Analysis for Metastatic (Upregulated and Downregulated)
-up.EA.meta_male <- TCGAanalyze_EAcomplete(TFname = "Upregulated Metastatic Male", RegulonList = upreg_meta_male)
-down.EA.meta_male <- TCGAanalyze_EAcomplete(TFname = "Downregulated Metastatic Male", RegulonList = downreg_meta_male)
+up.EA.meta <- TCGAanalyze_EAcomplete(TFname = "Upregulated Metastatic", RegulonList = upreg_meta)
+down.EA.meta <- TCGAanalyze_EAcomplete(TFname = "Downregulated Metastatic ", RegulonList = downreg_meta)
+up.EA.prim <- TCGAanalyze_EAcomplete(TFname = "Upregulated Primary", RegulonList = upreg_prim)
+down.EA.prim <- TCGAanalyze_EAcomplete(TFname = "Downregulated Primary", RegulonList = downreg_prim)
 
-up.EA.meta_female <- TCGAanalyze_EAcomplete(TFname = "Upregulated Metastatic Female", RegulonList = upreg_meta_female)
-down.EA.meta_female <- TCGAanalyze_EAcomplete(TFname = "Downregulated Metastatic Female", RegulonList = downreg_meta_female)
-
-# Functional Enrichment Analysis for Primary (Upregulated and Downregulated)
-up.EA.prim_male <- TCGAanalyze_EAcomplete(TFname = "Upregulated Primary Male", RegulonList = upreg_prim_male)
-down.EA.prim_male <- TCGAanalyze_EAcomplete(TFname = "Downregulated Primary Male", RegulonList = downreg_prim_male)
-
-up.EA.prim_female <- TCGAanalyze_EAcomplete(TFname = "Upregulated Primary Female", RegulonList = upreg_prim_female)
-down.EA.prim_female <- TCGAanalyze_EAcomplete(TFname = "Downregulated Primary Female", RegulonList = downreg_prim_female)
 
 #Visualization of the enrichment analysis of upregulated Metastatic Female Samples
-TCGAvisualize_EAbarplot(tf = rownames(up.EA.meta_female$ResBP),
-                        GOBPTab = up.EA.meta_female$ResBP,
-                        GOCCTab = up.EA.meta_female$ResCC,
-                        GOMFTab = up.EA.meta_female$ResMF,
-                        PathTab = up.EA.meta_female$ResPat,
-                        nRGTab = upreg_meta_female,
+TCGAvisualize_EAbarplot(tf = rownames(up.EA.meta$ResBP),
+                        GOBPTab = up.EA.meta$ResBP,
+                        GOCCTab = up.EA.meta$ResCC,
+                        GOMFTab = up.EA.meta$ResMF,
+                        PathTab = up.EA.meta$ResPat,
+                        nRGTab = upreg_meta,
                         nBar = 5,
                         text.size = 2,
                         fig.width = 30,
                         fig.height = 15)
 
-#Visualization of the enrichment analysis of upregulated Metastatic male Samples
-TCGAvisualize_EAbarplot(tf = rownames(up.EA.meta_male$ResBP),
-                        GOBPTab = up.EA.meta_male$ResBP,
-                        GOCCTab = up.EA.meta_male$ResCC,
-                        GOMFTab = up.EA.meta_male$ResMF,
-                        PathTab = up.EA.meta_male$ResPat,
-                        nRGTab = upreg_meta_male,
+TCGAvisualize_EAbarplot(tf = rownames(down.EA.meta$ResBP),
+                        GOBPTab = down.EA.meta$ResBP,
+                        GOCCTab = down.EA.meta$ResCC,
+                        GOMFTab = down.EA.meta$ResMF,
+                        PathTab = down.EA.meta$ResPat,
+                        nRGTab = downreg_meta,
                         nBar = 5,
                         text.size = 2,
                         fig.width = 30,
                         fig.height = 15)
 
-#Visualization of the enrichment analysis of downregulated Metastatic male Samples
-TCGAvisualize_EAbarplot(tf = rownames(down.EA.meta_male$ResBP),
-                        GOBPTab = down.EA.meta_male$ResBP,
-                        GOCCTab = down.EA.meta_male$ResCC,
-                        GOMFTab = down.EA.meta_male$ResMF,
-                        PathTab = down.EA.meta_male$ResPat,
-                        nRGTab = downreg_meta_male,
+TCGAvisualize_EAbarplot(tf = rownames(up.EA.prim$ResBP),
+                        GOBPTab = up.EA.prim$ResBP,
+                        GOCCTab = up.EA.prim$ResCC,
+                        GOMFTab = up.EA.prim$ResMF,
+                        PathTab = up.EA.prim$ResPat,
+                        nRGTab = upreg_prim,
                         nBar = 5,
                         text.size = 2,
                         fig.width = 30,
                         fig.height = 15)
 
-#Visualization of the enrichment analysis of downregulated Metastatic female Samples
-TCGAvisualize_EAbarplot(tf = rownames(down.EA.meta_female$ResBP),
-                        GOBPTab = down.EA.meta_female$ResBP,
-                        GOCCTab = down.EA.meta_female$ResCC,
-                        GOMFTab = down.EA.meta_female$ResMF,
-                        PathTab = down.EA.meta_female$ResPat,
-                        nRGTab = downreg_meta_female,
-                        nBar = 5,
-                        text.size = 2,
-                        fig.width = 30,
-                        fig.height = 15)
-
-#Visualization of the enrichment analysis of upregulated Primary Female Samples
-TCGAvisualize_EAbarplot(tf = rownames(up.EA.prim_female$ResBP),
-                        GOBPTab = up.EA.prim_female$ResBP,
-                        GOCCTab = up.EA.prim_female$ResCC,
-                        GOMFTab = up.EA.prim_female$ResMF,
-                        PathTab = up.EA.prim_female$ResPat,
-                        nRGTab = upreg_prim_female,
-                        nBar = 5,
-                        text.size = 2,
-                        fig.width = 30,
-                        fig.height = 15)
-
-#Visualization of the enrichment analysis of upregulated Primary male Samples
-TCGAvisualize_EAbarplot(tf = rownames(up.EA.prim_male$ResBP),
-                        GOBPTab = up.EA.prim_male$ResBP,
-                        GOCCTab = up.EA.prim_male$ResCC,
-                        GOMFTab = up.EA.prim_male$ResMF,
-                        PathTab = up.EA.prim_male$ResPat,
-                        nRGTab = upreg_prim_male,
-                        nBar = 5,
-                        text.size = 2,
-                        fig.width = 30,
-                        fig.height = 15)
-
-#Visualization of the enrichment analysis of downregulated Primary male Samples
-TCGAvisualize_EAbarplot(tf = rownames(down.EA.prim_male$ResBP),
-                        GOBPTab = down.EA.prim_male$ResBP,
-                        GOCCTab = down.EA.prim_male$ResCC,
-                        GOMFTab = down.EA.prim_male$ResMF,
-                        PathTab = down.EA.prim_male$ResPat,
-                        nRGTab = downreg_prim_male,
-                        nBar = 5,
-                        text.size = 2,
-                        fig.width = 30,
-                        fig.height = 15)
-
-#Visualization of the enrichment analysis of downregulated Primary female Samples
-TCGAvisualize_EAbarplot(tf = rownames(down.EA.prim_female$ResBP),
-                        GOBPTab = down.EA.prim_female$ResBP,
-                        GOCCTab = down.EA.prim_female$ResCC,
-                        GOMFTab = down.EA.prim_female$ResMF,
-                        PathTab = down.EA.prim_female$ResPat,
-                        nRGTab = downreg_prim_female,
+TCGAvisualize_EAbarplot(tf = rownames(down.EA.prim$ResBP),
+                        GOBPTab = down.EA.prim$ResBP,
+                        GOCCTab = down.EA.prim$ResCC,
+                        GOMFTab = down.EA.prim$ResMF,
+                        PathTab = down.EA.prim$ResPat,
+                        nRGTab = downreg_prim,
                         nBar = 5,
                         text.size = 2,
                         fig.width = 30,
