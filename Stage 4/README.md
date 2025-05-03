@@ -3,7 +3,7 @@
 ## **Description**
 This project explores the role that IDH mutation plays in Glioma. It is split into multiple parts
 1. Differential Expression Analysis
-2. Functional enrichment analysis
+2. Gene Function Analysis
 3. k-NN Analysis
 4. Random Forest
 
@@ -28,10 +28,10 @@ Dataset is uploaded directly onto RStudio using TCGABiolink, then preproccessed 
 2. Treatment level DEA is performed
 3. Ouput is used as data to generate heatmaps comparing the clustering of males vs females in both tumor types
 
-### **Functional Enrichment Analysis**
+### **Gene Function Analysis**
 1. The up and downregulated genes for all 4 subsets are extracted individually
 2. The data undergoes functional enrichment analysis (particularly gene ontology), selecting the top 5 pathways.
-3. Results are visualized in a barplot form and the PDF is saved on the computed
+3. Results are visualized in a barplot form and the PDF is saved on the computer
 
 *Machine Learning*
 1. Perform k-NN analysis
